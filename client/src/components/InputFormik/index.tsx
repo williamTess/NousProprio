@@ -14,6 +14,7 @@ export const InputFormik = (props: Props) => {
       fullWidth
       id={name}
       name={name}
+      type={name}
       label={capitalize(name)}
       value={formik.values[name]}
       onChange={formik.handleChange}

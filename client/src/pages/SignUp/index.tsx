@@ -3,9 +3,12 @@ import * as yup from "yup";
 import Button from "@mui/material/Button";
 import { InputFormik } from "../../components/InputFormik";
 import Nav from "../../components/Nav";
+import { CircularProgress } from "@mui/material";
+import { useState } from "react";
+import { request } from "../../utils/request";
 
 const validationSchema = yup.object({
-  userName: yup.string().required("userName is required"),
+  username: yup.string().required("username is required"),
   email: yup
     .string()
     .email("Enter a valid email")
@@ -17,15 +20,22 @@ const validationSchema = yup.object({
 });
 
 const SignUpPage = () => {
+  const [error, setError] = useState<boolean>(false);
   const formik = useFormik({
     initialValues: {
-      userName: "",
+      username: "",
       email: "",
       password: "",
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      setError(false);
+      request("post", "/api/auth/signup", { body: JSON.stringify(values) })
+        .then((data) => {
+          data.json().then((d) => !d.success && setError(true));
+        })
+        .catch(() => setError(true))
+        .finally(() => formik.setSubmitting(false));
     },
   });
 
@@ -33,7 +43,7 @@ const SignUpPage = () => {
     <div className="p-3 max-w-lg mx-auto">
       <h1 className="text-3xl font-semibold text-center my-7">Sign Up</h1>
       <form onSubmit={formik.handleSubmit} className="flex flex-col gap-4">
-        <InputFormik name="userName" formik={formik} />
+        <InputFormik name="username" formik={formik} />
         <InputFormik name="email" formik={formik} />
         <InputFormik name="password" formik={formik} />
 
@@ -42,9 +52,9 @@ const SignUpPage = () => {
           variant="contained"
           fullWidth
           type="submit"
-          disabled={!formik.isValid}
+          disabled={!formik.isValid || formik.isSubmitting}
         >
-          Sign Up
+          {formik.isSubmitting ? <CircularProgress size={25} /> : "Sign Up"}
         </Button>
       </form>
       <div className="flex gap-2 mt-5">
@@ -54,6 +64,7 @@ const SignUpPage = () => {
           element={<span className="text-blue-500">Sign in</span>}
         />
       </div>
+      {error && <p className="text-red-500">Something went wrong</p>}
     </div>
   );
 };
