@@ -7,6 +7,8 @@ import { CircularProgress } from "@mui/material";
 import { useState } from "react";
 import { request } from "../../utils/request";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { signInSuccess } from "../../redux/user/userSlice";
 
 const validationSchema = yup.object({
   email: yup
@@ -20,7 +22,8 @@ const validationSchema = yup.object({
 });
 
 const SignInPage = () => {
-  const [error, setError] = useState<boolean>(false);
+  const [error, setError] = useState<string>("");
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
@@ -29,15 +32,15 @@ const SignInPage = () => {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      setError(false);
+      setError("");
       request("post", "/api/auth/signin", { body: JSON.stringify(values) })
         .then((data) => {
           data.json().then((d) => {
-            if (!d.success) setError(true);
-            else navigate("/");
+            if (!d.success) setError(d.error);
+            else dispatch(signInSuccess(d)) && navigate("/");
           });
         })
-        .catch(() => setError(true))
+        .catch((err) => setError(err.message))
         .finally(() => formik.setSubmitting(false));
     },
   });
@@ -66,7 +69,9 @@ const SignInPage = () => {
           element={<span className="text-blue-500">Sign in</span>}
         />
       </div>
-      {error && <p className="text-red-500">Something went wrong</p>}
+      {error && (
+        <p className="text-red-500">{error || "Something went wrong"}</p>
+      )}
     </div>
   );
 };
