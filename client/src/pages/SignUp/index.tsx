@@ -6,6 +6,7 @@ import Nav from "../../components/Nav";
 import { CircularProgress } from "@mui/material";
 import { useState } from "react";
 import { request } from "../../utils/request";
+import { useNavigate } from "react-router-dom";
 
 const validationSchema = yup.object({
   username: yup.string().required("username is required"),
@@ -21,6 +22,7 @@ const validationSchema = yup.object({
 
 const SignUpPage = () => {
   const [error, setError] = useState<boolean>(false);
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       username: "",
@@ -32,7 +34,10 @@ const SignUpPage = () => {
       setError(false);
       request("post", "/api/auth/signup", { body: JSON.stringify(values) })
         .then((data) => {
-          data.json().then((d) => !d.success && setError(true));
+          data.json().then((d) => {
+            if (!d.success) setError(true);
+            else navigate("/sign-in");
+          });
         })
         .catch(() => setError(true))
         .finally(() => formik.setSubmitting(false));
