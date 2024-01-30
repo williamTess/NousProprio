@@ -17,6 +17,7 @@ const userSlice = createSlice({
   reducers: {
     signInSuccess: (state, action) => {
       state.currentUser = {
+        id: action.payload._id,
         username: action.payload.username,
         email: action.payload.email,
       };
