@@ -1,6 +1,5 @@
 import { useFormik } from "formik";
 import * as yup from "yup";
-import Button from "@mui/material/Button";
 import { InputFormik } from "../../components/InputFormik";
 import Nav from "../../components/Nav";
 import { CircularProgress } from "@mui/material";
@@ -9,6 +8,8 @@ import { request } from "../../utils/request";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { signInSuccess } from "../../redux/user/userSlice";
+import { ButtonMUI } from "../../components/ButtonMUI";
+import { OAuth } from "../../components/OAuth";
 
 const validationSchema = yup.object({
   email: yup
@@ -52,21 +53,20 @@ const SignInPage = () => {
         <InputFormik name="email" formik={formik} />
         <InputFormik name="password" formik={formik} />
 
-        <Button
-          color="primary"
-          variant="contained"
-          fullWidth
+        <ButtonMUI
           type="submit"
           disabled={!formik.isValid || formik.isSubmitting}
-        >
-          {formik.isSubmitting ? <CircularProgress size={25} /> : "Sign Up"}
-        </Button>
+          value={
+            formik.isSubmitting ? <CircularProgress size={25} /> : "Sign In"
+          }
+        />
+        <OAuth />
       </form>
       <div className="flex gap-2 mt-5">
         <p>Dont have an account? </p>
         <Nav
           to="/sign-up"
-          element={<span className="text-blue-500">Sign in</span>}
+          element={<span className="text-blue-500">Sign up</span>}
         />
       </div>
       {error && (

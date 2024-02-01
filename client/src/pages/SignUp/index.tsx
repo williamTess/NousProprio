@@ -1,12 +1,13 @@
 import { useFormik } from "formik";
 import * as yup from "yup";
-import Button from "@mui/material/Button";
 import { InputFormik } from "../../components/InputFormik";
 import Nav from "../../components/Nav";
 import { CircularProgress } from "@mui/material";
 import { useState } from "react";
 import { request } from "../../utils/request";
 import { useNavigate } from "react-router-dom";
+import { ButtonMUI } from "../../components/ButtonMUI";
+import { OAuth } from "../../components/OAuth";
 
 const validationSchema = yup.object({
   username: yup.string().required("username is required"),
@@ -52,15 +53,14 @@ const SignUpPage = () => {
         <InputFormik name="email" formik={formik} />
         <InputFormik name="password" formik={formik} />
 
-        <Button
-          color="primary"
-          variant="contained"
-          fullWidth
+        <ButtonMUI
           type="submit"
           disabled={!formik.isValid || formik.isSubmitting}
-        >
-          {formik.isSubmitting ? <CircularProgress size={25} /> : "Sign Up"}
-        </Button>
+          value={
+            formik.isSubmitting ? <CircularProgress size={25} /> : "Sign Up"
+          }
+        />
+        <OAuth />
       </form>
       <div className="flex gap-2 mt-5">
         <p>Have an account? </p>
