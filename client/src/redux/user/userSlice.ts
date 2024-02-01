@@ -20,6 +20,7 @@ const userSlice = createSlice({
         id: action.payload._id,
         username: action.payload.username,
         email: action.payload.email,
+        profilePicture: action.payload.profilePicture,
       };
     },
   },
