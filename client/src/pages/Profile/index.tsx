@@ -7,6 +7,7 @@ import { InputFormik } from "../../components/InputFormik";
 import { CircularProgress } from "@mui/material";
 import { useState } from "react";
 import { ButtonMUI } from "../../components/ButtonMUI";
+import { ImageFinder } from "../../components/FileFinder";
 
 const validationSchema = yup.object({
   username: yup.string().required("Username is required"),
@@ -19,15 +20,18 @@ const validationSchema = yup.object({
 const ProfilePage = () => {
   const { currentUser } = useSelector((state: RootState) => state.user);
   const [error, setError] = useState<string>("");
+  const [imageUrl, setImageUrl] = useState<string>("");
 
   const formik = useFormik({
     initialValues: {
       username: currentUser?.username,
       email: currentUser?.email,
+      profilePicture: currentUser?.profilePicture,
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
       setError("");
+      if (imageUrl) values.profilePicture = imageUrl;
       console.log(values);
     },
   });
@@ -37,10 +41,10 @@ const ProfilePage = () => {
   return (
     <div className="p-3 max-w-lg mx-auto">
       <form onSubmit={formik.handleSubmit} className="flex flex-col gap-5">
-        <img
-          src={currentUser.profilePicture}
-          alt="profile-pic"
-          className="h-24 w-24 self-center cursor-pointer rounded-full object-cover my-10"
+        <ImageFinder
+          name="profilePicture"
+          imageUrl={imageUrl || currentUser.profilePicture}
+          onChange={setImageUrl}
         />
         <InputFormik name="username" formik={formik} />
         <InputFormik name="email" formik={formik} />
