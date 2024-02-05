@@ -9,7 +9,7 @@ import { useState } from "react";
 import { ButtonMUI } from "../../components/ButtonMUI";
 import { ImageFinder } from "../../components/FileFinder";
 import { request } from "../../utils/request";
-import { setUser } from "../../redux/user/userSlice";
+import { removeUser, setUser } from "../../redux/user/userSlice";
 
 const validationSchema = yup.object({
   username: yup.string().required("Username is required"),
@@ -49,6 +49,17 @@ const ProfilePage = () => {
     },
   });
 
+  const handleDeleteAccount = () => {
+    request("delete", `api/user/delete/${currentUser?.id}`)
+      .then((data) => {
+        data.json().then((d) => {
+          if (!d.success) setError(d.error);
+          else dispatch(removeUser());
+        });
+      })
+      .catch((err) => setError(err.message));
+  };
+
   if (!currentUser) return <div>Error</div>;
 
   return (
@@ -71,7 +82,12 @@ const ProfilePage = () => {
         />
       </form>
       <div className="flex justify-between my-5">
-        <span className="text-red-700 cursor-pointer">Delete this account</span>
+        <span
+          className="text-red-700 cursor-pointer"
+          onClick={handleDeleteAccount}
+        >
+          Delete this account
+        </span>
         <span className="text-red-700 cursor-pointer">Sign Out</span>
       </div>
       {error && (

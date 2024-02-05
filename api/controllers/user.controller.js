@@ -8,9 +8,6 @@ export const test = (req, res) => {
 
 export const updateUser = async (req, res, next) => {
   if (!req.user) return next(errorHandler(401, "cannot find user"));
-
-  console.log(req.user, req.params);
-
   if (req.user.id !== req.params.id)
     return next(errorHandler(401, "You can only update your account"));
 
@@ -34,6 +31,21 @@ export const updateUser = async (req, res, next) => {
 
     const { password, ...others } = updatedUser._doc;
     res.status(200).json({ ...others, success: true });
+  } catch (err) {
+    next(err);
+  }
+};
+
+export const deleteUser = async (req, res, next) => {
+  if (!req.user) return next(errorHandler(401, "cannot find user"));
+  if (req.user.id !== req.params.id)
+    return next(errorHandler(401, "You can only delete your account"));
+
+  try {
+    await User.findByIdAndDelete(req.params.id);
+    res
+      .status(200)
+      .json({ success: true, message: "Account has been deleted" });
   } catch (err) {
     next(err);
   }
