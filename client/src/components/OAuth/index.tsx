@@ -3,10 +3,12 @@ import { ButtonMUI } from "../ButtonMUI";
 import { app } from "../../firebase";
 import { request } from "../../utils/request";
 import { useDispatch } from "react-redux";
-import { signInSuccess } from "../../redux/user/userSlice";
+import { setUser } from "../../redux/user/userSlice";
+import { useNavigate } from "react-router-dom";
 
 export const OAuth = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleGoogleClick = async () => {
     const provider = new GoogleAuthProvider();
@@ -24,8 +26,7 @@ export const OAuth = () => {
       });
 
       const data = await resFromApi.json();
-      console.log(data);
-      dispatch(signInSuccess(data));
+      if (data.success) dispatch(setUser(data)) && navigate("/");
     } catch (err) {
       console.log(err);
     }

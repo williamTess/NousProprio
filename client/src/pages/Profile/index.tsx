@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 
 import { useFormik } from "formik";
@@ -8,6 +8,8 @@ import { CircularProgress } from "@mui/material";
 import { useState } from "react";
 import { ButtonMUI } from "../../components/ButtonMUI";
 import { ImageFinder } from "../../components/FileFinder";
+import { request } from "../../utils/request";
+import { setUser } from "../../redux/user/userSlice";
 
 const validationSchema = yup.object({
   username: yup.string().required("Username is required"),
@@ -21,6 +23,7 @@ const ProfilePage = () => {
   const { currentUser } = useSelector((state: RootState) => state.user);
   const [error, setError] = useState<string>("");
   const [imageUrl, setImageUrl] = useState<string>("");
+  const dispatch = useDispatch();
 
   const formik = useFormik({
     initialValues: {
@@ -32,7 +35,17 @@ const ProfilePage = () => {
     onSubmit: (values) => {
       setError("");
       if (imageUrl) values.profilePicture = imageUrl;
-      console.log(values);
+      request("post", `api/user/update/${currentUser?.id}`, {
+        body: JSON.stringify(values),
+      })
+        .then((data) => {
+          data.json().then((d) => {
+            if (!d.success) setError(d.error);
+            else dispatch(setUser(d));
+          });
+        })
+        .catch((err) => setError(err.message))
+        .finally(() => formik.setSubmitting(false));
     },
   });
 

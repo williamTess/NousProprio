@@ -7,7 +7,7 @@ import { useState } from "react";
 import { request } from "../../utils/request";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { signInSuccess } from "../../redux/user/userSlice";
+import { setUser } from "../../redux/user/userSlice";
 import { ButtonMUI } from "../../components/ButtonMUI";
 import { OAuth } from "../../components/OAuth";
 
@@ -38,7 +38,7 @@ const SignInPage = () => {
         .then((data) => {
           data.json().then((d) => {
             if (!d.success) setError(d.error);
-            else dispatch(signInSuccess(d)) && navigate("/");
+            else dispatch(setUser(d)) && navigate("/");
           });
         })
         .catch((err) => setError(err.message))

@@ -15,7 +15,7 @@ const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    signInSuccess: (state, action) => {
+    setUser: (state, action) => {
       state.currentUser = {
         id: action.payload._id,
         username: action.payload.username,
@@ -26,6 +26,6 @@ const userSlice = createSlice({
   },
 });
 
-export const { signInSuccess } = userSlice.actions;
+export const { setUser } = userSlice.actions;
 
 export default userSlice.reducer;
