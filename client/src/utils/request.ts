@@ -10,11 +10,13 @@ export const request = (
         headers: { "Content-Type": "application/json" },
         body: data?.body,
       });
+    case "get":
     case "delete":
       return fetch(uri, {
         method: type.toUpperCase(),
         headers: { "Content-Type": "application/json" },
       });
+
     default:
       return fetch(uri);
   }

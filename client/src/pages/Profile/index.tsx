@@ -60,6 +60,14 @@ const ProfilePage = () => {
       .catch((err) => setError(err.message));
   };
 
+  const handleSignout = () => {
+    request("get", "api/auth/signout")
+      .then(() => {
+        dispatch(removeUser());
+      })
+      .catch((err) => setError(err.message));
+  };
+
   if (!currentUser) return <div>Error</div>;
 
   return (
@@ -88,7 +96,9 @@ const ProfilePage = () => {
         >
           Delete this account
         </span>
-        <span className="text-red-700 cursor-pointer">Sign Out</span>
+        <span className="text-red-700 cursor-pointer" onClick={handleSignout}>
+          Sign Out
+        </span>
       </div>
       {error && (
         <p className="text-red-500">{error || "Something went wrong"}</p>
