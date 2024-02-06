@@ -4,10 +4,10 @@ import { InputFormik } from "../../components/InputFormik";
 import Nav from "../../components/Nav";
 import { CircularProgress } from "@mui/material";
 import { useState } from "react";
-import { request } from "../../utils/request";
 import { useNavigate } from "react-router-dom";
 import { ButtonMUI } from "../../components/ButtonMUI";
 import { OAuth } from "../../components/OAuth";
+import { signUp } from "../../redux/user/userActions";
 
 const validationSchema = yup.object({
   username: yup.string().required("username is required"),
@@ -33,12 +33,10 @@ const SignUpPage = () => {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       setError(false);
-      request("post", "/api/auth/signup", { body: JSON.stringify(values) })
-        .then((data) => {
-          data.json().then((d) => {
-            if (!d.success) setError(true);
-            else navigate("/sign-in");
-          });
+      signUp(values)
+        .then((d) => {
+          if (!d.success) setError(true);
+          else navigate("/sign-in");
         })
         .catch(() => setError(true))
         .finally(() => formik.setSubmitting(false));

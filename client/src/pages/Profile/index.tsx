@@ -8,8 +8,8 @@ import { CircularProgress } from "@mui/material";
 import { useState } from "react";
 import { ButtonMUI } from "../../components/ButtonMUI";
 import { ImageFinder } from "../../components/FileFinder";
-import { request } from "../../utils/request";
 import { removeUser, setUser } from "../../redux/user/userSlice";
+import { deleteUser, signOut, updateUser } from "../../redux/user/userActions";
 
 const validationSchema = yup.object({
   username: yup.string().required("Username is required"),
@@ -35,14 +35,11 @@ const ProfilePage = () => {
     onSubmit: (values) => {
       setError("");
       if (imageUrl) values.profilePicture = imageUrl;
-      request("post", `api/user/update/${currentUser?.id}`, {
-        body: JSON.stringify(values),
-      })
-        .then((data) => {
-          data.json().then((d) => {
-            if (!d.success) setError(d.error);
-            else dispatch(setUser(d));
-          });
+
+      updateUser(values, currentUser?.id)
+        .then((d) => {
+          if (!d.success) setError(d.error);
+          else dispatch(setUser(d));
         })
         .catch((err) => setError(err.message))
         .finally(() => formik.setSubmitting(false));
@@ -50,18 +47,16 @@ const ProfilePage = () => {
   });
 
   const handleDeleteAccount = () => {
-    request("delete", `api/user/delete/${currentUser?.id}`)
-      .then((data) => {
-        data.json().then((d) => {
-          if (!d.success) setError(d.error);
-          else dispatch(removeUser());
-        });
+    deleteUser(currentUser?.id)
+      .then((d) => {
+        if (!d.success) setError(d.error);
+        else dispatch(removeUser());
       })
       .catch((err) => setError(err.message));
   };
 
   const handleSignout = () => {
-    request("get", "api/auth/signout")
+    signOut()
       .then(() => {
         dispatch(removeUser());
       })
