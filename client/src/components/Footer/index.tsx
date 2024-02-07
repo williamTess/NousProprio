@@ -4,6 +4,7 @@ import { ButtonMUI } from "../ButtonMUI";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { Logo } from "../../svg/Logo";
 
 export const Footer = () => {
   const Column = ({
@@ -24,7 +25,9 @@ export const Footer = () => {
   return (
     <>
       <div className="bg-slate-800 text-white p-10">
-        <p className="mb-10">Test</p>
+        <p className="mb-10">
+          <Logo color="white" />
+        </p>
         <div className="flex flex-row justify-between mb-10">
           <Column title="A propos">
             <>

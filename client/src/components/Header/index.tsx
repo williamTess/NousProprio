@@ -1,16 +1,18 @@
 import { useSelector } from "react-redux";
 import Nav from "../Nav";
 import { RootState } from "../../redux/store";
+import { Logo } from "../../svg/Logo";
 
 const Header = () => {
   const { currentUser } = useSelector((state: RootState) => state.user);
+
   return (
     <div className="bg-slate-200">
       <div className="flex justify-between items-center p-3">
-        <Nav to="/" element={<h1 className="font-bold">Header</h1>} />
+        <Nav to="/" element={<Logo />} />
         <ul className="flex gap-12 mr-12">
-          <Nav to="/" element={<li>Home</li>} />
-          <Nav to="/about" element={<li>About</li>} />
+          <Nav to="/" element={<li>Accueil</li>} />
+          <Nav to="/about" element={<li>A propos</li>} />
           <Nav
             to="/profile"
             element={
@@ -21,7 +23,7 @@ const Header = () => {
                   className="h-7 w-7 rounded-full object-cover"
                 />
               ) : (
-                <li>Sign in</li>
+                <li>Connexion</li>
               )
             }
           />
