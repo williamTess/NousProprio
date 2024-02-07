@@ -5,30 +5,40 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Logo } from "../../svg/Logo";
+import { useMediaQuery } from "react-responsive";
 
 export const Footer = () => {
+  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
+  const styleAccordingToOrientation = isPortrait
+    ? "flex flex-col text-center items-center mb-10"
+    : "flex flex-row justify-between mb-10";
+
   const Column = ({
     title,
     children,
   }: {
     title: string;
     children?: ReactElement;
-  }) => {
-    return (
-      <div className="flex flex-col max-w-56">
-        <h3 className="text-blue-500 font-semibold mb-3 text-lg">{title}</h3>
-        {children}
-      </div>
-    );
-  };
+  }) => (
+    <div
+      className={`flex flex-col max-w-56 mb-10 ${isPortrait && "items-center"}`}
+    >
+      <h3 className="text-blue-500 font-semibold mb-3 text-lg">{title}</h3>
+      {children}
+    </div>
+  );
 
   return (
     <>
-      <div className="bg-slate-800 text-white p-10">
+      <div
+        className={`flex flex-col bg-slate-800 text-white p-10 ${
+          isPortrait && "items-center"
+        }`}
+      >
         <p className="mb-10">
           <Logo color="white" />
         </p>
-        <div className="flex flex-row justify-between mb-10">
+        <div className={styleAccordingToOrientation}>
           <Column title="A propos">
             <>
               <p className="mb-3">
@@ -61,7 +71,7 @@ export const Footer = () => {
               <p className="mb-5">
                 <LinkedInIcon /> Linkedin
               </p>
-              <div className="flex gap-2 max-w-10">
+              <div className={`flex gap-2 max-w-10 ${isPortrait && "mr-40"}`}>
                 <ButtonMUI value={<InstagramIcon />} />
                 <ButtonMUI value={<TwitterIcon />} />
                 <ButtonMUI value={<LinkedInIcon />} />
