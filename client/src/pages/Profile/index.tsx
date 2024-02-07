@@ -10,6 +10,7 @@ import { ButtonMUI } from "../../components/ButtonMUI";
 import { ImageFinder } from "../../components/FileFinder";
 import { removeUser, setUser } from "../../redux/user/userSlice";
 import { deleteUser, signOut, updateUser } from "../../redux/user/userActions";
+import { phoneRegExp } from "../../constant";
 
 const validationSchema = yup.object({
   username: yup.string().required("Username is required"),
@@ -17,6 +18,7 @@ const validationSchema = yup.object({
     .string()
     .email("Enter a valid email")
     .required("Email is required"),
+  phoneNumber: yup.string().matches(phoneRegExp, "Phone number is not valid"),
 });
 
 const ProfilePage = () => {
@@ -30,6 +32,8 @@ const ProfilePage = () => {
       username: currentUser?.username,
       email: currentUser?.email,
       profilePicture: currentUser?.profilePicture,
+      phoneNumber: currentUser?.phoneNumber,
+      statusText: currentUser?.statusText,
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
@@ -75,6 +79,8 @@ const ProfilePage = () => {
         />
         <InputFormik name="username" formik={formik} />
         <InputFormik name="email" formik={formik} />
+        <InputFormik name="phoneNumber" formik={formik} />
+        <InputFormik name="statusText" formik={formik} multiline rows={4} />
 
         <ButtonMUI
           type="submit"

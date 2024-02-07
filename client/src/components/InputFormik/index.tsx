@@ -5,10 +5,11 @@ interface Props {
   name: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   formik: any;
+  [key: string]: unknown;
 }
 
 export const InputFormik = (props: Props) => {
-  const { name, formik } = props;
+  const { name, formik, ...rest } = props;
   return (
     <TextField
       fullWidth
@@ -21,6 +22,7 @@ export const InputFormik = (props: Props) => {
       onBlur={formik.handleBlur}
       error={formik.touched[name] && Boolean(formik.errors[name])}
       helperText={formik.touched[name] && formik.errors[name]}
+      {...rest}
     />
   );
 };
