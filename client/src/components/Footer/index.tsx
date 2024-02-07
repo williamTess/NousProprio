@@ -23,7 +23,9 @@ export const Footer = () => {
     <div
       className={`flex flex-col max-w-56 mb-10 ${isPortrait && "items-center"}`}
     >
-      <h3 className="text-blue-500 font-semibold mb-3 text-lg">{title}</h3>
+      <h3 className="text-blue-500 font-semibold justi mb-3 text-lg">
+        {title}
+      </h3>
       {children}
     </div>
   );
@@ -42,7 +44,7 @@ export const Footer = () => {
           <Column title="A propos">
             <>
               <p className="mb-3">
-                NouProprio, une entreprise qui partage des informations
+                NousProprio, une entreprise qui partage des informations
                 immobilières pour répondre aux non-dits du domaine
               </p>
               <ButtonMUI className="max-w-24" value={"Accueil"} />

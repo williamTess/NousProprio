@@ -31,7 +31,7 @@ export const getSignInNotif = (d: User) => {
       )
     : myNotif(
         Status.SUCCESS,
-        "Vous êtes connecté , n'oubliez pas de compléter votre profil. <b><U>Cliquez ici<U/></b>",
+        "Vous êtes connecté, complétez votre profil. <b><U>Cliquez ici<U/></b>",
         "/profile"
       );
 };

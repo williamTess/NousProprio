@@ -93,7 +93,7 @@ export default function DrawerMUI() {
     <div>
       <React.Fragment key={"left"}>
         <Button onClick={toggleDrawer(true)}>
-          <MenuIcon fontSize="large" />
+          <MenuIcon fontSize="large" htmlColor="black" />
         </Button>
         <Drawer anchor={"left"} open={isOpen} onClose={toggleDrawer(false)}>
           {list()}
