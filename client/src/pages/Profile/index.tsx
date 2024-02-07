@@ -11,6 +11,8 @@ import { ImageFinder } from "../../components/FileFinder";
 import { removeUser, setUser } from "../../redux/user/userSlice";
 import { deleteUser, signOut, updateUser } from "../../redux/user/userActions";
 import { phoneRegExp } from "../../constant";
+import { myNotif } from "../../utils/myNotif";
+import { Status } from "../../type";
 
 const validationSchema = yup.object({
   username: yup.string().required("Username is required"),
@@ -23,7 +25,6 @@ const validationSchema = yup.object({
 
 const ProfilePage = () => {
   const { currentUser } = useSelector((state: RootState) => state.user);
-  const [error, setError] = useState<string>("");
   const [imageUrl, setImageUrl] = useState<string>("");
   const dispatch = useDispatch();
 
@@ -37,15 +38,22 @@ const ProfilePage = () => {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      setError("");
       if (imageUrl) values.profilePicture = imageUrl;
 
       updateUser(values, currentUser?.id)
         .then((d) => {
-          if (!d.success) setError(d.error);
-          else dispatch(setUser(d));
+          if (!d.success) myNotif(Status.ERROR, d.error);
+          else {
+            dispatch(setUser(d));
+            myNotif(
+              Status.SUCCESS,
+              "Votre compte a été mis à jour avec succès."
+            );
+          }
         })
-        .catch((err) => setError(err.message))
+        .catch((err) =>
+          myNotif(Status.ERROR, err.message || "Something went wrong")
+        )
         .finally(() => formik.setSubmitting(false));
     },
   });
@@ -53,18 +61,26 @@ const ProfilePage = () => {
   const handleDeleteAccount = () => {
     deleteUser(currentUser?.id)
       .then((d) => {
-        if (!d.success) setError(d.error);
-        else dispatch(removeUser());
+        if (!d.success) myNotif(Status.ERROR, d.error);
+        else {
+          dispatch(removeUser());
+          myNotif(Status.SUCCESS, "Votre compte a été supprimé avec succès.");
+        }
       })
-      .catch((err) => setError(err.message));
+      .catch((err) =>
+        myNotif(Status.ERROR, err.message || "Something went wrong")
+      );
   };
 
   const handleSignout = () => {
     signOut()
       .then(() => {
         dispatch(removeUser());
+        myNotif(Status.SUCCESS, "Vous êtes maintenat déconnecté.");
       })
-      .catch((err) => setError(err.message));
+      .catch((err) =>
+        myNotif(Status.ERROR, err.message || "Something went wrong")
+      );
   };
 
   if (!currentUser) return <div>Error</div>;
@@ -101,9 +117,6 @@ const ProfilePage = () => {
           Sign Out
         </span>
       </div>
-      {error && (
-        <p className="text-red-500">{error || "Something went wrong"}</p>
-      )}
     </div>
   );
 };

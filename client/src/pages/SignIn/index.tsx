@@ -3,13 +3,14 @@ import * as yup from "yup";
 import { InputFormik } from "../../components/MUI/InputFormik";
 import Nav from "../../components/Nav";
 import { CircularProgress } from "@mui/material";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../redux/user/userSlice";
 import { ButtonMUI } from "../../components/MUI/ButtonMUI";
 import { OAuth } from "../../components/OAuth";
 import { signIn } from "../../redux/user/userActions";
+import { getSignInNotif, myNotif } from "../../utils/myNotif";
+import { Status } from "../../type";
 
 const validationSchema = yup.object({
   email: yup
@@ -23,7 +24,6 @@ const validationSchema = yup.object({
 });
 
 const SignInPage = () => {
-  const [error, setError] = useState<string>("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const formik = useFormik({
@@ -33,13 +33,18 @@ const SignInPage = () => {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      setError("");
       signIn(values)
         .then((d) => {
-          if (!d.success) setError(d.error);
-          else dispatch(setUser(d)) && navigate("/");
+          if (!d.success) myNotif(Status.ERROR, d.error);
+          else {
+            dispatch(setUser(d));
+            getSignInNotif(d);
+            navigate("/");
+          }
         })
-        .catch((err) => setError(err.message))
+        .catch((err) =>
+          myNotif(Status.ERROR, err.message || "Something went wrong")
+        )
         .finally(() => formik.setSubmitting(false));
     },
   });
@@ -67,9 +72,6 @@ const SignInPage = () => {
           element={<span className="text-blue-500">Sign up</span>}
         />
       </div>
-      {error && (
-        <p className="text-red-500">{error || "Something went wrong"}</p>
-      )}
     </div>
   );
 };

@@ -5,6 +5,8 @@ import { request } from "../../utils/request";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../redux/user/userSlice";
 import { useNavigate } from "react-router-dom";
+import { getSignInNotif, myNotif } from "../../utils/myNotif";
+import { Status } from "../../type";
 
 export const OAuth = () => {
   const dispatch = useDispatch();
@@ -26,9 +28,13 @@ export const OAuth = () => {
       });
 
       const data = await resFromApi.json();
-      if (data.success) dispatch(setUser(data)) && navigate("/");
+      if (data.success) {
+        dispatch(setUser(data));
+        getSignInNotif(data);
+        navigate("/");
+      }
     } catch (err) {
-      console.log(err);
+      myNotif(Status.ERROR, JSON.stringify(err) || "Something went wrong");
     }
   };
   return (
