@@ -4,7 +4,7 @@ import { RootState } from "../../redux/store";
 import { Logo } from "../../svg/Logo";
 import { useMediaQuery } from "react-responsive";
 import { DesktopHeader } from "./DesktopHeader";
-import DrawerMUI from "../DrawerMUI";
+import DrawerMUI from "../MUI/DrawerMUI";
 
 const Header = () => {
   const { currentUser } = useSelector((state: RootState) => state.user);

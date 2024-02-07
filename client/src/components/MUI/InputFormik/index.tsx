@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material";
-import { capitalize } from "../../utils/capitalize";
+import { capitalize } from "../../../utils/capitalize";
 
 interface Props {
   name: string;

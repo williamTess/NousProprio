@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { ButtonMUI } from "../ButtonMUI";
+import { ButtonMUI } from "../MUI/ButtonMUI";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";

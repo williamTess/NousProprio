@@ -1,5 +1,5 @@
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-import { ButtonMUI } from "../ButtonMUI";
+import { ButtonMUI } from "../MUI/ButtonMUI";
 import { app } from "../../firebase";
 import { request } from "../../utils/request";
 import { useDispatch } from "react-redux";

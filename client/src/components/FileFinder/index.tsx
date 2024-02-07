@@ -7,7 +7,7 @@ import {
   uploadBytesResumable,
 } from "firebase/storage";
 import { app } from "../../firebase";
-import { CircularProgressWithLabel } from "../CircularProgressWithLabel";
+import { CircularProgressWithLabel } from "../MUI/CircularProgressWithLabel";
 
 interface Props {
   imageUrl: string;

@@ -1,4 +1,4 @@
-import { ButtonMUI } from "../../components/ButtonMUI";
+import { ButtonMUI } from "../../components/MUI/ButtonMUI";
 import Image from "/images/video-test.jpg";
 
 const HomePage = () => {

@@ -11,10 +11,10 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
-import { headerTabs } from "../../constant";
-import Nav from "../Nav";
+import { headerTabs } from "../../../constant";
+import Nav from "../../Nav";
 import { useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
+import { RootState } from "../../../redux/store";
 
 export default function DrawerMUI() {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);

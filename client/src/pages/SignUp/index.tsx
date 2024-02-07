@@ -1,11 +1,11 @@
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { InputFormik } from "../../components/InputFormik";
+import { InputFormik } from "../../components/MUI/InputFormik";
 import Nav from "../../components/Nav";
 import { CircularProgress } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ButtonMUI } from "../../components/ButtonMUI";
+import { ButtonMUI } from "../../components/MUI/ButtonMUI";
 import { OAuth } from "../../components/OAuth";
 import { signUp } from "../../redux/user/userActions";
 

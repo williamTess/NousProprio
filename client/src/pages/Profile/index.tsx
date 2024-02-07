@@ -3,10 +3,10 @@ import { RootState } from "../../redux/store";
 
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { InputFormik } from "../../components/InputFormik";
+import { InputFormik } from "../../components/MUI/InputFormik";
 import { CircularProgress } from "@mui/material";
 import { useState } from "react";
-import { ButtonMUI } from "../../components/ButtonMUI";
+import { ButtonMUI } from "../../components/MUI/ButtonMUI";
 import { ImageFinder } from "../../components/FileFinder";
 import { removeUser, setUser } from "../../redux/user/userSlice";
 import { deleteUser, signOut, updateUser } from "../../redux/user/userActions";
