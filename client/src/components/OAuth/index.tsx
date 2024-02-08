@@ -34,13 +34,16 @@ export const OAuth = () => {
         navigate("/");
       }
     } catch (err) {
-      myNotif(Status.ERROR, JSON.stringify(err) || "Something went wrong");
+      myNotif(
+        Status.ERROR,
+        JSON.stringify(err) || "Quelque chose s'est mal passé"
+      );
     }
   };
   return (
     <ButtonMUI
       type="button"
-      value="Continue with google"
+      value="Continuer avec Google"
       color="error"
       onClick={() => handleGoogleClick()}
     />

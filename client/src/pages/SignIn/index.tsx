@@ -43,15 +43,15 @@ const SignInPage = () => {
           }
         })
         .catch((err) =>
-          myNotif(Status.ERROR, err.message || "Something went wrong")
+          myNotif(Status.ERROR, err.message || "Quelque chose s'est mal passé")
         )
         .finally(() => formik.setSubmitting(false));
     },
   });
 
   return (
-    <div className="p-3 max-w-lg mx-auto">
-      <h1 className="text-3xl font-semibold text-center my-7">Sign In</h1>
+    <div className="p-3 max-w-lg mx-auto mb-36">
+      <h1 className="text-center text-4xl font-bold p-5 mb-10">Connexion</h1>
       <form onSubmit={formik.handleSubmit} className="flex flex-col gap-4">
         <InputFormik name="email" formik={formik} />
         <InputFormik name="password" formik={formik} />
@@ -60,16 +60,16 @@ const SignInPage = () => {
           type="submit"
           disabled={!formik.isValid || formik.isSubmitting}
           value={
-            formik.isSubmitting ? <CircularProgress size={25} /> : "Sign In"
+            formik.isSubmitting ? <CircularProgress size={25} /> : "Valider"
           }
         />
         <OAuth />
       </form>
       <div className="flex gap-2 mt-5">
-        <p>Dont have an account? </p>
+        <p>Vous n'avez pas de compte? </p>
         <Nav
           to="/sign-up"
-          element={<span className=" text-main">Sign up</span>}
+          element={<span className=" text-main">S'inscrire</span>}
         />
       </div>
     </div>
