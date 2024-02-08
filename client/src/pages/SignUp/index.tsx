@@ -71,7 +71,7 @@ const SignUpPage = () => {
         <p>Have an account? </p>
         <Nav
           to="/sign-in"
-          element={<span className="text-blue-500">Sign in</span>}
+          element={<span className=" text-main">Sign in</span>}
         />
       </div>
     </div>

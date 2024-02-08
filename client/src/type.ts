@@ -21,3 +21,11 @@ export enum Status {
   WARNING = "warning",
   INFO = "info",
 }
+
+export type TeamMember = {
+  name: string;
+  role: string;
+  description: string;
+  img: string;
+  icon: ReactElement;
+};

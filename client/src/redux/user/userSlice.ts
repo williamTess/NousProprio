@@ -1,14 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { User } from "../../type";
+import { headerTabs } from "../../constant";
 
 export interface UserStateType {
   currentUser: User | null;
-  error: boolean;
+  currentTab: string;
 }
 
 const initialState: UserStateType = {
   currentUser: null,
-  error: false,
+  currentTab: headerTabs[0].to,
 };
 
 const userSlice = createSlice({
@@ -28,9 +29,12 @@ const userSlice = createSlice({
     removeUser: (state) => {
       state.currentUser = null;
     },
+    setCurrentTab: (state, action) => {
+      state.currentTab = action.payload;
+    },
   },
 });
 
-export const { setUser, removeUser } = userSlice.actions;
+export const { setUser, removeUser, setCurrentTab } = userSlice.actions;
 
 export default userSlice.reducer;

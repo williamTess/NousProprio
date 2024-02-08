@@ -69,7 +69,7 @@ const SignInPage = () => {
         <p>Dont have an account? </p>
         <Nav
           to="/sign-up"
-          element={<span className="text-blue-500">Sign up</span>}
+          element={<span className=" text-main">Sign up</span>}
         />
       </div>
     </div>

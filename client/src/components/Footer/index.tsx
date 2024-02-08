@@ -23,9 +23,7 @@ export const Footer = () => {
     <div
       className={`flex flex-col max-w-56 mb-10 ${isPortrait && "items-center"}`}
     >
-      <h3 className="text-blue-500 font-semibold justi mb-3 text-lg">
-        {title}
-      </h3>
+      <h3 className=" text-main font-semibold justi mb-5 text-lg">{title}</h3>
       {children}
     </div>
   );
@@ -33,17 +31,17 @@ export const Footer = () => {
   return (
     <>
       <div
-        className={`flex flex-col bg-slate-800 text-white p-10 ${
+        className={`flex flex-col bg-footer text-white px-20 py-16 ${
           isPortrait && "items-center"
         }`}
       >
-        <p className="mb-10">
+        <p className="mb-16">
           <Logo color="white" />
         </p>
         <div className={styleAccordingToOrientation}>
           <Column title="A propos">
             <>
-              <p className="mb-3">
+              <p className="mb-5">
                 NousProprio, une entreprise qui partage des informations
                 immobilières pour répondre aux non-dits du domaine
               </p>
@@ -52,7 +50,7 @@ export const Footer = () => {
           </Column>
           <Column title="Notre SAV">
             <>
-              <p className="mb-3">Bientôt disponible</p>
+              <p className="mb-5">Bientôt disponible</p>
               <a
                 className="text-blue-600 font-semibold hover:underline"
                 href="mailto:will94290@yahoo.fr"
@@ -65,13 +63,14 @@ export const Footer = () => {
             <>
               <p className="mb-1">Bientôt disponible: </p>
               <p className="mb-1">
-                <InstagramIcon /> Instagram
+                <InstagramIcon />
+                <span className="font-semibold"> Instagram</span>
               </p>
               <p className="mb-1">
-                <TwitterIcon /> Twitter
+                <TwitterIcon /> <span className="font-semibold">Twitter</span>
               </p>
-              <p className="mb-5">
-                <LinkedInIcon /> Linkedin
+              <p className="mb-7">
+                <LinkedInIcon /> <span className="font-semibold">Linkedin</span>
               </p>
               <div className={`flex gap-2 max-w-10 ${isPortrait && "mr-40"}`}>
                 <ButtonMUI value={<InstagramIcon />} />
@@ -82,15 +81,15 @@ export const Footer = () => {
           </Column>
           <Column title="Contactez nous">
             <>
-              <p className="mb-3">Bientôt disponible</p>
+              <p className="mb-5">Bientôt disponible</p>
               <ButtonMUI className="max-w-24" value={"Contact"} />
             </>
           </Column>
         </div>
-        <p>NousProprios, notre entreprise</p>
+        <p>NousProprio, notre entreprise</p>
       </div>
-      <div className="bg-slate-900 text-white px-10 py-5">
-        NousProprios . CGV . Mentions légales . Politique de confidentialité
+      <div className="bg-underFooter text-white px-20 py-7">
+        NousProprio . CGV . Mentions légales . Politique de confidentialité
       </div>
     </>
   );
