@@ -8,6 +8,14 @@ interface Props {
   [key: string]: unknown;
 }
 
+const labels: Record<string, string> = {
+  username: "Nom d'utilisateur",
+  email: "Email",
+  password: "Mot de passe",
+  phoneNumber: "Numéro de téléphone",
+  statusText: "Vos attentes",
+};
+
 export const InputFormik = (props: Props) => {
   const { name, formik, ...rest } = props;
   return (
@@ -16,7 +24,7 @@ export const InputFormik = (props: Props) => {
       id={name}
       name={name}
       type={name}
-      label={capitalize(name)}
+      label={labels[name] || capitalize(name)}
       value={formik.values[name]}
       onChange={formik.handleChange}
       onBlur={formik.handleBlur}

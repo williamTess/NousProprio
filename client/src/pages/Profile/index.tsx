@@ -52,7 +52,7 @@ const ProfilePage = () => {
           }
         })
         .catch((err) =>
-          myNotif(Status.ERROR, err.message || "Something went wrong")
+          myNotif(Status.ERROR, err.message || "Quelque chose s'est mal passé")
         )
         .finally(() => formik.setSubmitting(false));
     },
@@ -68,7 +68,7 @@ const ProfilePage = () => {
         }
       })
       .catch((err) =>
-        myNotif(Status.ERROR, err.message || "Something went wrong")
+        myNotif(Status.ERROR, err.message || "Quelque chose s'est mal passé")
       );
   };
 
@@ -79,7 +79,7 @@ const ProfilePage = () => {
         myNotif(Status.SUCCESS, "Vous êtes maintenat déconnecté.");
       })
       .catch((err) =>
-        myNotif(Status.ERROR, err.message || "Something went wrong")
+        myNotif(Status.ERROR, err.message || "Quelque chose s'est mal passé")
       );
   };
 
@@ -102,7 +102,7 @@ const ProfilePage = () => {
           type="submit"
           disabled={!formik.isValid || formik.isSubmitting}
           value={
-            formik.isSubmitting ? <CircularProgress size={25} /> : "Update"
+            formik.isSubmitting ? <CircularProgress size={25} /> : "Sauvegarder"
           }
         />
       </form>
@@ -111,10 +111,10 @@ const ProfilePage = () => {
           className="text-red-700 cursor-pointer"
           onClick={handleDeleteAccount}
         >
-          Delete this account
+          Supprimer ce compte
         </span>
         <span className="text-red-700 cursor-pointer" onClick={handleSignout}>
-          Sign Out
+          Déconnexion
         </span>
       </div>
     </div>

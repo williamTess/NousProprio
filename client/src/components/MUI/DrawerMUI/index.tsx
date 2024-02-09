@@ -15,6 +15,7 @@ import { headerTabs } from "../../../constant";
 import Nav from "../../Nav";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
+import { color } from "../../../style/color";
 
 export default function DrawerMUI() {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
@@ -93,7 +94,7 @@ export default function DrawerMUI() {
     <div>
       <React.Fragment key={"left"}>
         <Button onClick={toggleDrawer(true)}>
-          <MenuIcon fontSize="large" htmlColor="black" />
+          <MenuIcon fontSize="large" htmlColor={color.main} />
         </Button>
         <Drawer anchor={"left"} open={isOpen} onClose={toggleDrawer(false)}>
           {list()}

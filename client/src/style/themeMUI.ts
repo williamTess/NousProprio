@@ -1,5 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 import { green } from "@mui/material/colors";
+import { color } from "./color";
 
 const theme = createTheme({
   typography: {
@@ -9,7 +10,7 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#4299E1",
+      main: color.main,
     },
     secondary: {
       main: green[500],
