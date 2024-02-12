@@ -5,7 +5,7 @@ const AboutPage = () => {
 
   return (
     <div className="flex flex-col">
-      <h1 className="text-center text-4xl font-bold p-5">Notre équipe</h1>
+      <h1 className="text-center text-3xl font-bold p-5">Notre équipe</h1>
       {team.map((member) => {
         isEven = !isEven;
         const infos = [

@@ -21,7 +21,7 @@ export default function DrawerMUI() {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
   const currentUser = useSelector((state: RootState) => state.user.currentUser);
 
-  const toggleDrawer =
+  const toggleDrawer = React.useCallback(
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
         event.type === "keydown" &&
@@ -32,7 +32,9 @@ export default function DrawerMUI() {
       }
 
       setIsOpen(open);
-    };
+    },
+    []
+  );
 
   const list = () => (
     <Box
@@ -94,7 +96,7 @@ export default function DrawerMUI() {
     <div>
       <React.Fragment key={"left"}>
         <Button onClick={toggleDrawer(true)}>
-          <MenuIcon fontSize="large" htmlColor={color.main} />
+          <MenuIcon fontSize="large" htmlColor={color.greyLight} />
         </Button>
         <Drawer anchor={"left"} open={isOpen} onClose={toggleDrawer(false)}>
           {list()}

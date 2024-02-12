@@ -15,8 +15,8 @@ const Header = () => {
 
   return (
     <div className="sticky top-0 z-10">
-      <div className="bg-white">
-        <div className="flex justify-between items-center p-5">
+      <div className={`bg-white ${!isPortrait && "pl-14"}`}>
+        <div className="flex justify-between items-center p-5 ">
           <Nav
             to="/"
             element={<Logo />}
