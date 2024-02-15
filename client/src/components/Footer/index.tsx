@@ -32,64 +32,69 @@ export const Footer = () => {
     <>
       <div
         className={`flex flex-col bg-footer text-white px-20 py-16 ${
-          isPortrait && "items-center"
+          isPortrait && "text-center"
         }`}
       >
-        <p className="mb-16">
-          <Logo color="white" />
-        </p>
-        <div className={styleAccordingToOrientation}>
-          <Column title="A propos">
-            <>
-              <p className="mb-5">
-                NousProprio, une entreprise qui partage des informations
-                immobilières pour répondre aux non-dits du domaine
-              </p>
-              <ButtonMUI className="max-w-24" value={"Accueil"} />
-            </>
-          </Column>
-          <Column title="Notre SAV">
-            <>
-              <p className="mb-5">Bientôt disponible</p>
-              <a
-                className="text-blue-600 font-semibold hover:underline"
-                href="mailto:will94290@yahoo.fr"
-              >
-                <ArrowForwardIcon fontSize="small" /> Nous contacter
-              </a>
-            </>
-          </Column>
-          <Column title="Suivez nous sur les réseaux sociaux">
-            <>
-              <p className="mb-1">Bientôt disponible: </p>
-              <p className="mb-1">
-                <InstagramIcon />
-                <span className="font-semibold"> Instagram</span>
-              </p>
-              <p className="mb-1">
-                <TwitterIcon /> <span className="font-semibold">Twitter</span>
-              </p>
-              <p className="mb-7">
-                <LinkedInIcon /> <span className="font-semibold">Linkedin</span>
-              </p>
-              <div className={`flex gap-2 max-w-10 ${isPortrait && "mr-40"}`}>
-                <ButtonMUI value={<InstagramIcon />} />
-                <ButtonMUI value={<TwitterIcon />} />
-                <ButtonMUI value={<LinkedInIcon />} />
-              </div>
-            </>
-          </Column>
-          <Column title="Contactez nous">
-            <>
-              <p className="mb-5">Bientôt disponible</p>
-              <ButtonMUI className="max-w-24" value={"Contact"} />
-            </>
-          </Column>
+        <div className={`flex flex-col w-full max-w-[1350px] m-auto`}>
+          <p className={`mb-16 ${isPortrait && "self-center"}`}>
+            <Logo color="white" />
+          </p>
+          <div className={styleAccordingToOrientation}>
+            <Column title="A propos">
+              <>
+                <p className="mb-5">
+                  NousProprio, une entreprise qui partage des informations
+                  immobilières pour répondre aux non-dits du domaine
+                </p>
+                <ButtonMUI className="max-w-24" value={"Accueil"} />
+              </>
+            </Column>
+            <Column title="Notre SAV">
+              <>
+                <p className="mb-5">Bientôt disponible</p>
+                <a
+                  className="text-blue-600 font-semibold hover:underline"
+                  href="mailto:will94290@yahoo.fr"
+                >
+                  <ArrowForwardIcon fontSize="small" /> Nous contacter
+                </a>
+              </>
+            </Column>
+            <Column title="Suivez nous sur les réseaux sociaux">
+              <>
+                <p className="mb-1">Bientôt disponible: </p>
+                <p className="mb-1">
+                  <InstagramIcon />
+                  <span className="font-semibold"> Instagram</span>
+                </p>
+                <p className="mb-1">
+                  <TwitterIcon /> <span className="font-semibold">Twitter</span>
+                </p>
+                <p className="mb-7">
+                  <LinkedInIcon />{" "}
+                  <span className="font-semibold">Linkedin</span>
+                </p>
+                <div className={`flex gap-2 max-w-10 ${isPortrait && "mr-40"}`}>
+                  <ButtonMUI value={<InstagramIcon />} />
+                  <ButtonMUI value={<TwitterIcon />} />
+                  <ButtonMUI value={<LinkedInIcon />} />
+                </div>
+              </>
+            </Column>
+            <Column title="Contactez nous">
+              <>
+                <p className="mb-5">Bientôt disponible</p>
+                <ButtonMUI className="max-w-24" value={"Contact"} />
+              </>
+            </Column>
+          </div>
+          <p>NousProprio, notre entreprise</p>
         </div>
-        <p>NousProprio, notre entreprise</p>
       </div>
-      <div className="bg-underFooter text-white px-20 py-7">
-        NousProprio . CGV . Mentions légales . Politique de confidentialité
+      <div className="bg-underFooter text-white px-20 py-7 flex">
+        <div className="max-w-[1350px] m-auto">
+          NousProprio . CGV . Mentions légales . Politique de confidentialité
+        </div>
       </div>
     </>
   );

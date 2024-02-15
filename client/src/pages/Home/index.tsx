@@ -1,14 +1,14 @@
 import { useMediaQuery } from "react-responsive";
 import { ButtonMUI } from "../../components/MUI/ButtonMUI";
-import Image from "/images/video-test.jpg";
+import YouTube from "react-youtube";
 
 const HomePage = () => {
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
 
   return (
     <div className="flex flex-col">
-      <div className="bg-gray-light text-white flex flex-col py-44 px-20 mb-10 items-center">
-        <div className="max-w-7xl">
+      <div className="bg-gray-light text-white flex flex-col py-44 px-20 mb-10">
+        <div className="w-[80%] max-w-7xl m-auto">
           <p className="mb-6">Vous êtes au bon endroit !</p>
           <h1 className="font-bold text-4xl mb-10">Nos Propres Héros</h1>
           <p className="mb-16">
@@ -20,18 +20,18 @@ const HomePage = () => {
             <br />
             Notre but : Vous apporter toutes ces informations.
           </p>
-        </div>
-        <div className={`flex flex-${isPortrait ? "col" : "row"} gap-3`}>
-          <div className="max-w-xs">
-            <ButtonMUI value={"Présentation"} />
-          </div>
-          <div className="max-w-xs">
-            <ButtonMUI value={"Inscris-toi"} variant="outlined" />
+          <div className={`flex flex-${isPortrait ? "col" : "row"} gap-3`}>
+            <div className="max-w-xs">
+              <ButtonMUI value={"Présentation"} />
+            </div>
+            <div className="max-w-xs">
+              <ButtonMUI value={"Inscris-toi"} variant="outlined" />
+            </div>
           </div>
         </div>
       </div>
-      <div className="py-16 px-20 flex flex-col items-center">
-        <div className="flex flex-col max-w-7xl">
+      <div className="py-16 px-20 flex flex-col">
+        <div className=" w-[80%] flex flex-col max-w-7xl m-auto">
           <p className="text-blue-400 mb-8">
             Une vidéo vaut mieux que 10 000 mots
           </p>
@@ -44,13 +44,10 @@ const HomePage = () => {
             Comme on dit une image vaut mieux que mille mots, alors regarde
             notre vidéo
           </p>
-          <img
-            className="mb-8 max-h-[600px]"
-            src={Image}
-            alt="vidéo immobilier"
-            width={2000}
-          />
-          <div className="max-w-24 self-center">
+          <div className="w-full h-[450px] mb-5">
+            <YouTube videoId="IiPd72FT14A" className="w-full h-full" />
+          </div>
+          <div className="max-w-24">
             <ButtonMUI value={"Inscription"} />
           </div>
         </div>

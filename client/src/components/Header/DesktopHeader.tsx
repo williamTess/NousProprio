@@ -39,7 +39,7 @@ export const DesktopHeader = () => {
             />
           ) : (
             <li
-              className={`hover:text-main ${
+              className={`hover:text-main mr-6 ${
                 currentTab === "/sign-in" && "font-bold text-main"
               }`}
             >
