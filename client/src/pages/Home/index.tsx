@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <div className="flex flex-col">
       <div className="bg-gray-light text-white flex flex-col py-44 px-20 mb-10">
-        <div className="w-[80%] max-w-7xl m-auto">
+        <div className="w-[100%] max-w-7xl m-auto">
           <p className="mb-6">Vous êtes au bon endroit !</p>
           <h1 className="font-bold text-4xl mb-10">Nos Propres Héros</h1>
           <p className="mb-16">
@@ -31,7 +31,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className="py-16 px-20 flex flex-col">
-        <div className=" w-[80%] flex flex-col max-w-7xl m-auto">
+        <div className=" w-[100%] flex flex-col max-w-7xl m-auto">
           <p className="text-blue-400 mb-8">
             Une vidéo vaut mieux que 10 000 mots
           </p>
