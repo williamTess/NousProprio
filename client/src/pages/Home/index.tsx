@@ -4,11 +4,13 @@ import YouTube from "react-youtube";
 
 const HomePage = () => {
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
+  const sizeAccordingWidth = isPortrait ? "w-full" : "w-[80%]";
+  const sizeAccordingHeight = isPortrait ? "h-[300px]" : "h-[450px]";
 
   return (
     <div className="flex flex-col">
       <div className="bg-gray-light text-white flex flex-col py-44 px-20 mb-10">
-        <div className="w-[100%] max-w-7xl m-auto">
+        <div className={`${sizeAccordingWidth} max-w-7xl m-auto`}>
           <p className="mb-6">Vous êtes au bon endroit !</p>
           <h1 className="font-bold text-4xl mb-10">Nos Propres Héros</h1>
           <p className="mb-16">
@@ -31,7 +33,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className="py-16 px-20 flex flex-col">
-        <div className=" w-[100%] flex flex-col max-w-7xl m-auto">
+        <div className={`${sizeAccordingWidth} flex flex-col max-w-7xl m-auto`}>
           <p className="text-blue-400 mb-8">
             Une vidéo vaut mieux que 10 000 mots
           </p>
@@ -44,7 +46,7 @@ const HomePage = () => {
             Comme on dit une image vaut mieux que mille mots, alors regarde
             notre vidéo
           </p>
-          <div className="w-full h-[450px] mb-5">
+          <div className={`w-full ${sizeAccordingHeight} mb-5`}>
             <YouTube videoId="IiPd72FT14A" className="w-full h-full" />
           </div>
           <div className="max-w-24">
