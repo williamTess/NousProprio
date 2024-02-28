@@ -1,11 +1,23 @@
 import { useMediaQuery } from "react-responsive";
 import { ButtonMUI } from "../../components/MUI/ButtonMUI";
 import YouTube from "react-youtube";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
+import Nav from "../../components/Nav";
+import { useRef } from "react";
 
 const HomePage = () => {
+  const { currentUser } = useSelector((state: RootState) => state.user);
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
+  const videoRef = useRef<HTMLInputElement>(null);
   const sizeAccordingWidth = isPortrait ? "w-full" : "w-[80%]";
   const sizeAccordingHeight = isPortrait ? "h-[300px]" : "h-[450px]";
+
+  const handleScrollToVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="flex flex-col">
@@ -24,15 +36,25 @@ const HomePage = () => {
           </p>
           <div className={`flex flex-${isPortrait ? "col" : "row"} gap-3`}>
             <div className="max-w-xs">
-              <ButtonMUI value={"Présentation"} />
+              <ButtonMUI
+                value={"Présentation"}
+                onClick={() => handleScrollToVideo()}
+              />
             </div>
-            <div className="max-w-xs">
-              <ButtonMUI value={"Inscris-toi"} variant="outlined" />
-            </div>
+            {!currentUser && (
+              <div className="max-w-xs">
+                <Nav
+                  to="/sign-up"
+                  element={
+                    <ButtonMUI value={"Inscris-toi"} variant="outlined" />
+                  }
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
-      <div className="py-16 px-20 flex flex-col">
+      <div className="py-16 px-20 flex flex-col" ref={videoRef}>
         <div className={`${sizeAccordingWidth} flex flex-col max-w-7xl m-auto`}>
           <p className="text-blue-400 mb-8">
             Une vidéo vaut mieux que 10 000 mots
@@ -49,9 +71,14 @@ const HomePage = () => {
           <div className={`w-full ${sizeAccordingHeight} mb-5`}>
             <YouTube videoId="IiPd72FT14A" className="w-full h-full" />
           </div>
-          <div className="max-w-24">
-            <ButtonMUI value={"Inscription"} />
-          </div>
+          {!currentUser && (
+            <div className="max-w-24">
+              <Nav
+                to="/sign-up"
+                element={<ButtonMUI value={"Inscription"} />}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>

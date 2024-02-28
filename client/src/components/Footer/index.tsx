@@ -6,6 +6,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Logo } from "../../svg/Logo";
 import { useMediaQuery } from "react-responsive";
+import Nav from "../Nav";
 
 export const Footer = () => {
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
@@ -46,7 +47,10 @@ export const Footer = () => {
                   NousProprio, une entreprise qui partage des informations
                   immobilières pour répondre aux non-dits du domaine
                 </p>
-                <ButtonMUI className="max-w-24" value={"Accueil"} />
+                <Nav
+                  to="/"
+                  element={<ButtonMUI className="max-w-24" value={"Accueil"} />}
+                />
               </>
             </Column>
             <Column title="Notre SAV">
