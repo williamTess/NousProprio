@@ -58,7 +58,7 @@ export const Footer = () => {
                 <p className="mb-5">Bientôt disponible</p>
                 <a
                   className="text-blue-600 font-semibold hover:underline"
-                  href="mailto:will94290@yahoo.fr"
+                  href="mailto:nousproprio@gmail.com"
                 >
                   <ArrowForwardIcon fontSize="small" /> Nous contacter
                 </a>

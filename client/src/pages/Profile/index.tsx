@@ -13,6 +13,7 @@ import { deleteUser, signOut, updateUser } from "../../redux/user/userActions";
 import { phoneRegExp } from "../../constant";
 import { myNotif } from "../../utils/myNotif";
 import { Status } from "../../type";
+import { Modal } from "../../components/Modal";
 
 const validationSchema = yup.object({
   username: yup.string().required("Username is required"),
@@ -26,6 +27,7 @@ const validationSchema = yup.object({
 const ProfilePage = () => {
   const { currentUser } = useSelector((state: RootState) => state.user);
   const [imageUrl, setImageUrl] = useState<string>("");
+  const [displayModal, setDisplayModal] = useState<boolean>(false);
   const dispatch = useDispatch();
 
   const formik = useFormik({
@@ -109,13 +111,20 @@ const ProfilePage = () => {
       <div className="flex justify-between my-5">
         <span
           className="text-red-700 cursor-pointer"
-          onClick={handleDeleteAccount}
+          onClick={() => setDisplayModal(true)}
         >
           Supprimer ce compte
         </span>
         <span className="text-red-700 cursor-pointer" onClick={handleSignout}>
           Déconnexion
         </span>
+        {displayModal && (
+          <Modal
+            text={"Voulez-vous vraiment supprimer ce compte ?"}
+            onClose={() => setDisplayModal(false)}
+            onValidate={handleDeleteAccount}
+          />
+        )}
       </div>
     </div>
   );

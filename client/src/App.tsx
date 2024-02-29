@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import { PrivateRoute } from "./components/PrivateRoute";
 import { Footer } from "./components/Footer";
 import { NotFound } from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
+      <ScrollToTop />
     </Router>
   );
 }

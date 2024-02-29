@@ -31,8 +31,7 @@ const AboutPage = () => {
           Notre challenge; vous aider en s’adaptant à vos souhaits !
           <br /> <br />
           Parce que nous ne formons qu’un, remplaçons les « vous » par des nous.
-          <br /> <br />
-          Lançons nous ! »
+          <br /> <br />« Lançons nous ! »
         </p>
       </div>
       <h1 className="text-center text-3xl font-bold p-5 ">Notre équipe</h1>
@@ -65,7 +64,7 @@ const AboutPage = () => {
               }`}
             >
               <div
-                className={`flex flex-row w-full max-w-3xl justify-around gap-2`}
+                className={`flex flex-row w-full max-w-3xl justify-between gap-2`}
               >
                 {isEven ? infos.map((t) => t) : infos.reverse().map((t) => t)}
               </div>
