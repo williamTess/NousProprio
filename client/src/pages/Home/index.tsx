@@ -61,9 +61,8 @@ const HomePage = () => {
           </p>
           <h1 className="font-semibold text-3xl mb-8">Qui sommes nous ?</h1>
           <p className="mb-8">
-            Inscris toi pour recevoir la date de la sortie de notre site et
-            avoir l'accès à notre gamme complète qui te permettra de réussir tes
-            premiers pas en immobilier.
+            Inscris toi pour recevoir la date d'ouverture de notre site internet
+            et profiter de notre gamme personalisée de formation en immobilier.
             <br />
             Comme on dit une image vaut mieux que mille mots, alors regarde
             notre vidéo

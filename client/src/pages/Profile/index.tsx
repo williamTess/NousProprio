@@ -78,7 +78,7 @@ const ProfilePage = () => {
     signOut()
       .then(() => {
         dispatch(removeUser());
-        myNotif(Status.SUCCESS, "Vous êtes maintenat déconnecté.");
+        myNotif(Status.SUCCESS, "Vous êtes maintenant déconnecté.");
       })
       .catch((err) =>
         myNotif(Status.ERROR, err.message || "Quelque chose s'est mal passé")

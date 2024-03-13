@@ -55,10 +55,9 @@ export const Footer = () => {
             </Column>
             <Column title="Notre SAV">
               <>
-                <p className="mb-5">Bientôt disponible</p>
                 <a
                   className="text-blue-600 font-semibold hover:underline"
-                  href="mailto:nousproprio@gmail.com"
+                  href="mailto:equipe@nousproprio.fr"
                 >
                   <ArrowForwardIcon fontSize="small" /> Nous contacter
                 </a>
@@ -66,7 +65,6 @@ export const Footer = () => {
             </Column>
             <Column title="Suivez nous sur les réseaux sociaux">
               <>
-                <p className="mb-1">Bientôt disponible: </p>
                 <p className="mb-1">
                   <InstagramIcon />
                   <span className="font-semibold"> Instagram</span>
@@ -79,16 +77,29 @@ export const Footer = () => {
                   <span className="font-semibold">Linkedin</span>
                 </p>
                 <div className={`flex gap-2 max-w-10 ${isPortrait && "mr-40"}`}>
-                  <ButtonMUI value={<InstagramIcon />} />
-                  <ButtonMUI value={<TwitterIcon />} />
-                  <ButtonMUI value={<LinkedInIcon />} />
+                  <a
+                    href="https://www.instagram.com/nousproprio?igsh=MTJwaDgxc2NyNGF4Zw%3D%3D&utm_source=gr"
+                    target="_blank"
+                  >
+                    <ButtonMUI value={<InstagramIcon />} />
+                  </a>
+                  <a href="https://twitter.com/nousproprio" target="_blank">
+                    <ButtonMUI value={<TwitterIcon />} />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/nousproprio/about/"
+                    target="_blank"
+                  >
+                    <ButtonMUI value={<LinkedInIcon />} />
+                  </a>
                 </div>
               </>
             </Column>
-            <Column title="Contactez nous">
+            <Column title="Contactez-nous">
               <>
-                <p className="mb-5">Bientôt disponible</p>
-                <ButtonMUI className="max-w-24" value={"Contact"} />
+                <a href="mailto:equipe@nousproprio.fr">
+                  <ButtonMUI className="max-w-24" value={"Contact"} />
+                </a>
               </>
             </Column>
           </div>

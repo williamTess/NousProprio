@@ -28,7 +28,7 @@ const AboutPage = () => {
           <br /> <br />
           Enfin, le site se voit nommé Nousproprio, pour « Nous propriétaire »
           <br /> <br />
-          Notre challenge; vous aider en s’adaptant à vos souhaits !
+          Notre challenge; vous aider en s’adaptant à vos objectifs !
           <br /> <br />
           Parce que nous ne formons qu’un, remplaçons les « vous » par des nous.
           <br /> <br />« Lançons nous ! »
@@ -38,7 +38,7 @@ const AboutPage = () => {
       {team.map((member) => {
         isEven = !isEven;
         const infos = [
-          <div className="min-w-11">
+          <div className="min-w-32 self-center">
             <img
               src={member.img}
               alt={member.name}
@@ -52,7 +52,11 @@ const AboutPage = () => {
             <p>
               {member.icon} {member.role}
             </p>
-            <p>{member.description}</p>
+            <p>
+              {member.description.split("\n").map((des) => (
+                <p>{des}</p>
+              ))}
+            </p>
           </div>,
         ];
         return (
