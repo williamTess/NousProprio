@@ -20,7 +20,7 @@ export const team: TeamMember[] = [
     name: "Alex",
     role: "Fondateur",
     description:
-      "Mon objectif: faciliter vos investissements immobiliers et doper vos connaissances",
+      "Mon objectif : faciliter vos investissements immobiliers et doper vos connaissances",
     img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/logoOneSlap.png?alt=media&token=004ddbf1-cdb4-4593-b153-750ccddd942f",
     icon: <BusinessCenterIcon className="mb-1" />,
   },
@@ -28,7 +28,7 @@ export const team: TeamMember[] = [
     name: "Valentine",
     role: "Banquière",
     description:
-      "Acheteuse de biens résidentiels et locatifs\nBiens immobiliers locatifs",
+      "Acheteuse de biens résidentiels et locatifs\n2 biens immobiliers locatifs",
     img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Valentine.jpeg?alt=media&token=3634b46f-120f-477d-84b8-c367ad9cb78d",
     icon: <AccountBalanceIcon className="mb-1" />,
   },
@@ -36,7 +36,7 @@ export const team: TeamMember[] = [
     name: "Sarah",
     role: "Banquière",
     description:
-      "Banquière et investisseur dans l'immobilier locatif depuis 3 ans.\nBiens immobiliers locatifs",
+      "Banquière et investisseur dans l'immobilier locatif depuis 3 ans.\n2 biens immobiliers locatifs",
     img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Sarah%20photo%20Image%202024-03-12%20at%2012.16.54.jpeg?alt=media&token=3649df6e-9873-4ccb-bbb9-4c40359d39f4",
     icon: <AccountBalanceIcon className="mb-1" />,
   },
@@ -44,7 +44,7 @@ export const team: TeamMember[] = [
     name: "Johanna",
     role: "Experte en immobilier",
     description:
-      "Experte en financement immobilier depuis 6 ans.\nBiens immobiliers résidentiels",
+      "Experte en financement immobilier depuis 6 ans.\n1 bien immobilier résidentiel",
     img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Johanna.jpeg?alt=media&token=4af7792d-6d15-428a-8f4e-a8c054902de9",
     icon: <ApartmentIcon className="mb-1" />,
   },
@@ -52,7 +52,7 @@ export const team: TeamMember[] = [
     name: "Arold",
     role: "Expert en immobilier",
     description:
-      "Expert dans le processus d'achat d'un bien en construction.\nBiens immobiliers résidentiels",
+      "Expert dans le processus d'achat d'un bien en construction.\n1 bien immobilier résidentiel",
     img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Arold%20photo%20%20-%20copie.jpg?alt=media&token=9483c931-44d9-4bd3-957d-36a71af67b99",
     icon: <ApartmentIcon className="mb-1" />,
   },

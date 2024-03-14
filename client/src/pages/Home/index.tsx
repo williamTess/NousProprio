@@ -62,13 +62,13 @@ const HomePage = () => {
           <h1 className="font-semibold text-3xl mb-8">Qui sommes nous ?</h1>
           <p className="mb-8">
             Inscris toi pour recevoir la date d'ouverture de notre site internet
-            et profiter de notre gamme personalisée de formation en immobilier.
+            et profiter de notre gamme personalisée de formations en immobilier.
             <br />
             Comme on dit une image vaut mieux que mille mots, alors regarde
             notre vidéo
           </p>
           <div className={`w-full ${sizeAccordingHeight} mb-5`}>
-            <YouTube videoId="IiPd72FT14A" className="w-full h-full" />
+            <YouTube videoId="vuZwSKmjyV0" className="w-full h-full" />
           </div>
           {!currentUser && (
             <div className="max-w-24">

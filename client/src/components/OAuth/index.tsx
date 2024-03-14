@@ -34,10 +34,7 @@ export const OAuth = () => {
         navigate("/");
       }
     } catch (err) {
-      myNotif(
-        Status.ERROR,
-        JSON.stringify(err) || "Quelque chose s'est mal passé"
-      );
+      myNotif(Status.ERROR, "Quelque chose s'est mal passé veuillez réessayer");
     }
   };
   return (
