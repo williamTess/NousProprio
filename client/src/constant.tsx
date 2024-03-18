@@ -21,7 +21,7 @@ export const team: TeamMember[] = [
     role: "Fondateur",
     description:
       "Mon objectif : faciliter vos investissements immobiliers et doper vos connaissances",
-    img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/logoOneSlap.png?alt=media&token=004ddbf1-cdb4-4593-b153-750ccddd942f",
+    img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FAlex.jpeg?alt=media&token=48aa6765-e38c-49ac-8987-58b064598dc6",
     icon: <BusinessCenterIcon className="mb-1" />,
   },
   {
@@ -29,7 +29,7 @@ export const team: TeamMember[] = [
     role: "Banquière",
     description:
       "Acheteuse de biens résidentiels et locatifs\n2 biens immobiliers locatifs",
-    img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Valentine.jpeg?alt=media&token=3634b46f-120f-477d-84b8-c367ad9cb78d",
+    img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FValentine.jpeg?alt=media&token=369aaa4b-7364-4381-850f-f409568f2409",
     icon: <AccountBalanceIcon className="mb-1" />,
   },
   {
@@ -37,7 +37,7 @@ export const team: TeamMember[] = [
     role: "Banquière",
     description:
       "Banquière et investisseur dans l'immobilier locatif depuis 3 ans.\n2 biens immobiliers locatifs",
-    img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Sarah%20photo%20Image%202024-03-12%20at%2012.16.54.jpeg?alt=media&token=3649df6e-9873-4ccb-bbb9-4c40359d39f4",
+    img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FSarah.jpeg?alt=media&token=8c0d40b6-554a-4107-88f2-195f072322e3",
     icon: <AccountBalanceIcon className="mb-1" />,
   },
   {
@@ -45,7 +45,7 @@ export const team: TeamMember[] = [
     role: "Experte en immobilier",
     description:
       "Experte en financement immobilier depuis 6 ans.\n1 bien immobilier résidentiel",
-    img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Johanna.jpeg?alt=media&token=4af7792d-6d15-428a-8f4e-a8c054902de9",
+    img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FJoahana.jpeg?alt=media&token=8920bee6-c102-4f25-a6b3-99e179bcd220",
     icon: <ApartmentIcon className="mb-1" />,
   },
   {
@@ -53,14 +53,14 @@ export const team: TeamMember[] = [
     role: "Expert en immobilier",
     description:
       "Expert dans le processus d'achat d'un bien en construction.\n1 bien immobilier résidentiel",
-    img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Arold%20photo%20%20-%20copie.jpg?alt=media&token=9483c931-44d9-4bd3-957d-36a71af67b99",
+    img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FArold.jpeg?alt=media&token=1f177f9d-f444-4ead-b68d-6e71382081a2",
     icon: <ApartmentIcon className="mb-1" />,
   },
   {
     name: "Diego",
     role: "Graphiste",
     description: "Graphiste dans le domaine du social media",
-    img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Diego.jpeg?alt=media&token=c99777be-255e-4880-af60-e7124c9c67d0",
+    img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FDiego.jpg?alt=media&token=25371da6-579e-49eb-916b-4e7a4fcbdf46",
     icon: <DesignServicesIcon className="mb-1" />,
   },
   {
@@ -68,7 +68,7 @@ export const team: TeamMember[] = [
     role: "Developpeur & Designer",
     description:
       "Passionné par la programmation, a réalisé le site NousProprio.",
-    img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Capture%20d%E2%80%99e%CC%81cran%202024-03-13%20a%CC%80%2022.20.21.png?alt=media&token=5b0f5a68-7c74-4703-ba2e-53bcbe5af020",
+    img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FWilliam.png?alt=media&token=a94d140d-e8b3-456f-be7f-939ef1570d60",
     icon: <CodeIcon className="mb-1" />,
   },
 ];

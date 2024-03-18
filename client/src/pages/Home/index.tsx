@@ -29,10 +29,12 @@ const HomePage = () => {
             Unissons nos forces pour aller vers un partage des connaissances.
             <br />
             Encore trop de non-dits sur l'immobilier et ses rouages: Avoir un
-            bon taux, quelles assurances, rentabiliser mon bien, comment ne pas
-            se faire arnaquer ...
+            bon taux, quelles assurances, rentabiliser mon bien?
             <br />
-            Notre but : Vous apporter toutes ces informations.
+            Comment ne pas se faire arnaquer ...
+            <br />
+            <br />
+            <b>Notre but</b>: Vous apporter toutes ces informations.
           </p>
           <div className={`flex flex-${isPortrait ? "col" : "row"} gap-3`}>
             <div className="max-w-xs">
@@ -65,13 +67,13 @@ const HomePage = () => {
             et profiter de notre gamme personalisée de formations en immobilier.
             <br />
             Comme on dit une image vaut mieux que mille mots, alors regarde
-            notre vidéo
+            notre vidéo !
           </p>
           <div className={`w-full ${sizeAccordingHeight} mb-5`}>
             <YouTube videoId="vuZwSKmjyV0" className="w-full h-full" />
           </div>
           {!currentUser && (
-            <div className="max-w-24">
+            <div className="max-w-24 self-center">
               <Nav
                 to="/sign-up"
                 element={<ButtonMUI value={"Inscription"} />}
