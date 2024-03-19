@@ -28,8 +28,8 @@ const HomePage = () => {
           <p className="mb-16">
             Unissons nos forces pour aller vers un partage des connaissances.
             <br />
-            Encore trop de non-dits sur l'immobilier et ses rouages: Avoir un
-            bon taux, quelles assurances, rentabiliser mon bien?
+            Encore trop de non-dits sur l'immobilier et ses rouages: avoir un
+            bon taux, quelles assurances, comment rentabiliser mon bien?
             <br />
             Comment ne pas se faire arnaquer ...
             <br />
