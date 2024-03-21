@@ -70,7 +70,7 @@ const HomePage = () => {
             notre vidéo !
           </p>
           <div className={`w-full ${sizeAccordingHeight} mb-5`}>
-            <YouTube videoId="vuZwSKmjyV0" className="w-full h-full" />
+            <YouTube videoId="WqGJ6lUnJdI" className="w-full h-full" />
           </div>
           {!currentUser && (
             <div className="max-w-24 self-center">
