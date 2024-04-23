@@ -29,3 +29,13 @@ export type TeamMember = {
   img: string;
   icon: ReactElement;
 };
+
+export type Comment = {
+  username: string;
+  photo: string;
+  rate: number;
+  title: string;
+  description: string;
+  link: string;
+  date: string;
+};
