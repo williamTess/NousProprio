@@ -1,4 +1,3 @@
-import React from "react";
 import { Comment as CommenType } from "../../type";
 import { Stars } from "../Stars";
 import { Box } from "@mui/material";
