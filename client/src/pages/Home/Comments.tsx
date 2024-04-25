@@ -31,7 +31,17 @@ export const Comments = ({ sizeAccordingWidth, isPortrait }: CommentsProps) => {
   };
   return (
     <div className={`${sizeAccordingWidth} flex flex-col max-w-7xl m-auto`}>
-      <h1 className="font-semibold text-3xl mb-10">L'avis des étudiants</h1>
+      <div className="flex flex-col md:flex-row md:justify-between mb-4 md:mb-0">
+        <h1 className="font-semibold text-3xl mb-2 md:mb-10">
+          L'avis des étudiants
+        </h1>
+        <a
+          href="https://fr.trustpilot.com/review/nous-proprio.onrender.com"
+          target="_blank"
+        >
+          <p className="text-blue-400 underline">Voir les commentaires</p>
+        </a>
+      </div>
       <Box
         sx={{
           width: "100%",

@@ -24,7 +24,7 @@ const HomePage = () => {
           isPortrait={isPortrait}
         />
       </div>
-      <div className="py-20 px-20 flex flex-col">
+      <div className="py-20 px-20 flex flex-col" ref={videoRef}>
         <Boss sizeAccordingWidth={sizeAccordingWidth} isPortrait={isPortrait} />
       </div>
       <div className="py-20 px-20 flex flex-col bg-gray-light text-white">
@@ -33,7 +33,7 @@ const HomePage = () => {
           isPortrait={isPortrait}
         />
       </div>
-      <div className="py-16 px-20 flex flex-col" ref={videoRef}>
+      <div className="py-16 px-20 flex flex-col">
         <Video
           sizeAccordingHeight={sizeAccordingHeight}
           sizeAccordingWidth={sizeAccordingWidth}

@@ -30,16 +30,16 @@ export const Presentation = ({
         d'informations disponibles.
         <br />
         <br />
-        Grâce à notre approche personalisée, nous 
-        <b>découvrons tes objectifs</b>, à traversun questionnaire intuitif et
+        Grâce à notre approche personalisée, nous{" "}
+        <b>découvrons tes objectifs</b>, à travers un questionnaire intuitif et
         ciblé, qui te guide pas à pas <br />
         vers <b>notre formation sur mesure</b>.
         <br />
         <br />
-        <b>Tes objectifs, Ta formation sur mesure !</b>
+        <b>Tes objectifs, Ta formation !</b>
         <br />
         <br />
-        <b>Notre but</b>: T'aider à te lancer.
+        <b>Notre but</b>: T'aider à concrétiser.
       </p>
       <div className={`flex flex-${isPortrait ? "col" : "row"} gap-3`}>
         <div className="max-w-xs">

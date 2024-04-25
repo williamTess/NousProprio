@@ -23,7 +23,7 @@ export const Video = ({
       </div>
       <p className="mb-8 text-center">
         En t'inscrivant aujourd'hui, tu seras automatiquement inscrit à une
-        réunion privée ou tu pourras poser toutes tes questions sur l'immobilier
+        réunion privée où tu pourras poser toutes tes questions sur l'immobilier
         en plus d'avoir l'accès à notre accompagnement personnalisé.
         <br />
         <br />

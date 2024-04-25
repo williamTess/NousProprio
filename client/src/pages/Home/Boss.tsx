@@ -24,12 +24,12 @@ export const Boss = ({ sizeAccordingWidth, isPortrait }: BossProps) => {
         />
         <div className={`flex flex-col w-[70%] xl:w-[80%]`}>
           <div
-            className={`flex text-2xl mb-3 items-center ${
+            className={`flex text-2xl mb-3 items-center gap-2 ${
               isPortrait && "self-center mb-6 mt-4"
             }`}
           >
-            <b>{boss.name}</b>  
-            <span className="mb-0.5">{boss.icon}</span> {boss.role}
+            <b>{boss.name}</b> <span className="mb-0.5">{boss.icon}</span>
+            {boss.role}
           </div>
           <div className={`text-lg mb-4`}>
             {boss.list.map((e) => (

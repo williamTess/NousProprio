@@ -36,6 +36,4 @@ export type Comment = {
   rate: number;
   title: string;
   description: string;
-  link: string;
-  date: string;
 };

@@ -17,69 +17,52 @@ export const phoneRegExp =
 
 export const commentaries: Comment[] = [
   {
-    username: "Louise Groyer",
-    photo:
-      "https://user-images.trustpilot.com/661647e89ec6010012932021/73x73.png",
+    username: "Chelabi katia",
+    photo: "bg-orange-300",
     rate: 5,
-    title: "Professionnalisme et pédagogie",
+    title: "Les cours étaient excellent",
     description:
-      "Les cours de reporting financier avec Mr Guims ont été très instructifs. De nombreux échanges sur l'actualité de la finance ou autre sujet rythmaient le cours. Des informations utiles pour le quotidien et transmises de manière très pédagogique. Un professeur à l'écoute et disponible pour ses élèves ! Je ne peux que recommander !",
-    link: "https://fr.trustpilot.com/reviews/661647f893d13c9019df5b09",
-    date: "10 avr. 2024",
+      "Les cours étaient excellent , vraiment captivants et structurés de manière impeccable, offrant un équilibre parfait entre la théorie et la pratique, avec une participation active aux études de cas. Le professeur était extrêmement pédagogue et attentif, mettant tout en œuvre pour transmettre ses connaissances de manière efficace.",
   },
   {
-    username: "Romane ARASSUS",
-    photo:
-      "https://user-images.trustpilot.com/6613f8e7dadc910012326bce/73x73.png",
+    username: "Ahlem Jaha",
+    photo: "bg-green-300",
     rate: 5,
-    title: "Cours sur le reporting financier",
+    title: "Je recommande vivement",
     description:
-      "Les cours étaient interactifs. J'ai pu apprendre des éléments très concret. Merci pour votre accompagnement.",
-    link: "https://fr.trustpilot.com/users/6613f8e7dadc910012326bce",
-    date: "8 avr. 2024",
+      "Je recommande vivement ! La pédagogie employée est excellente, les informations sont claires, concises et adaptées à tout public, qu'il possède des connaissances approfondies sur le sujet ou non. Cela se distingue nettement des autres formations ou contenus disponibles sur Internet et les réseaux sociaux, qui offrent tous la même chose tant sur le fond que sur la forme.",
   },
   {
-    username: "Jonathan Kabore",
-    photo:
-      "https://user-images.trustpilot.com/6614c55551b19f00129e290d/73x73.png",
+    username: "Damien D",
+    photo: "bg-blue-300",
     rate: 5,
-    title: "Un projet prometteur",
+    title: "Pédagogie passionnante",
     description:
-      "L'initiative de Monsieur Guims qui a été mon professeur de finance, d'établir une entreprise immobilière démontre sa vision stratégique et son expertise dans le domaine financier. En combinant ses connaissances pointues en finance avec le secteur immobilier, cette entreprise promet d'apporter des solutions innovantes et rentables dans un marché en constante évolution.",
-    link: "https://fr.trustpilot.com/reviews/66150c7e23ef91fe45427ae8",
-    date: "9 avr. 2024",
+      "En tant que notre prof de reporting extra-financier, M.Guims a su être constamment créatif pour rendre son cours extrêmement intéressant et passionnant. Sa pédagogie permet une prise en main des sujets très facilement avec un grand niveau de compréhension. Merci pour ces séances !",
   },
   {
-    username: "Danawou kady",
-    photo:
-      "https://user-images.trustpilot.com/661e653aa2aa5500126adf1d/73x73.png",
+    username: "Manon Cochard",
+    photo: "bg-pink-300",
     rate: 5,
-    title: "Dispenser une bonne formation",
-    description: "Dispenser une bonne formation",
-    link: "https://fr.trustpilot.com/reviews/661e6563a99102abf08b697f",
-    date: "16 avr. 2024",
+    title: "pédagogue et captivant !",
+    description:
+      "Les leçons de ce professeur m’ont été très utiles. Sa méthode d’enseignement, cours TP et mise en relation avec l’actualité, favorise l’interaction et donc notre concentration. Cela m’a permis de retenir le contenu des cours plus facilement ainsi que de sortir de l’aspect théorique. Les explications sont claires et M. GUIMS s’adapte à notre rythme. Cette formation est un atout précieux. Je peux que la conseiller vivement !",
   },
   {
-    username: "Louise Groyer",
-    photo:
-      "https://user-images.trustpilot.com/661647e89ec6010012932021/73x73.png",
+    username: "Regnault",
+    photo: "bg-red-300",
     rate: 5,
-    title: "Professionnalisme et pédagogie",
+    title: "Un professeur très formateur !",
     description:
-      "Les cours de reporting financier avec Mr Guims ont été très instructifs. De nombreux échanges sur l'actualité de la finance ou autre sujet rythmaient le cours. Des informations utiles pour le quotidien et transmises de manière très pédagogique. Un professeur à l'écoute et disponible pour ses élèves ! Je ne peux que recommander !",
-    link: "https://fr.trustpilot.com/reviews/661647f893d13c9019df5b09",
-    date: "10 avr. 2024",
+      "Un professeur très formateur ! Les cours de Monsieur GUIMS ont été très intéressant et important pour notre formation. C’est un professeur qui aime ce qu’il fait et qui partage ses expériences ce qui permet de ne pas avoir un cours banale comme les autres mais un cours basé sur ce qui nous attends vraiment plus tard. Merci encore !",
   },
   {
-    username: "Louise Groyer",
-    photo:
-      "https://user-images.trustpilot.com/661647e89ec6010012932021/73x73.png",
+    username: "Elsie KONAN",
+    photo: "bg-orange-300",
     rate: 5,
-    title: "Professionnalisme et pédagogie",
+    title: "Pédagogie remarquable",
     description:
-      "Les cours de reporting financier avec Mr Guims ont été très instructifs. De nombreux échanges sur l'actualité de la finance ou autre sujet rythmaient le cours. Des informations utiles pour le quotidien et transmises de manière très pédagogique. Un professeur à l'écoute et disponible pour ses élèves ! Je ne peux que recommander !",
-    link: "https://fr.trustpilot.com/reviews/661647f893d13c9019df5b09",
-    date: "10 avr. 2024",
+      "Je souligne la remarquable approche pédagogique de M. Guims. Il se distingue véritablement par sa passion pour l’enseignement et son désir de partager ses connaissances avec ses étudiants. Le contenu accessible et engageant, facilitant ainsi une compréhension profonde des sujets étudiés. Chaque cours était une occasion d’apprendre de manière interactive, avec une attention particulière accordée à la stimulation de la curiosité et à l’encouragement de la réflexion critique.",
   },
 ];
 
@@ -145,7 +128,7 @@ export const boss = {
   name: "Alex",
   role: "Fondateur",
   description:
-    "J'enseigne dans des écoles de commerce sur Paris pour booster la motivation des étudiants et surtout changer le modèles d'enseignement: Faire apprendre des choses qui servent vraiments !",
+    "« J'enseigne dans des écoles de commerce sur Paris pour booster la motivation des étudiants et surtout changer le modèle d'enseignement: Faire apprendre des choses qui servent vraiment ! »",
   list: ["Gérant d'actifs financiers", "Intervenant en école de commerce"],
   img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FAlex.jpeg?alt=media&token=48aa6765-e38c-49ac-8987-58b064598dc6",
   icon: <BusinessCenterIcon className="mb-1" />,

@@ -10,12 +10,14 @@ type CommentProps = {
 export const Comment = ({ comment, className }: CommentProps) => {
   return (
     <div className={`flex flex-col ${className}`}>
-      <div className="flex p-2 gap-5 items-center">
-        <img
-          src={comment.photo}
-          alt={comment.username}
-          className="w-20 h-20 rounded-full object-cover"
-        />
+      <div className="flex flex-col md:flex-row p-2 gap-5 items-center text-center">
+        <div
+          className={`w-20 h-20 rounded-full object-cover flex items-center justify-center ${comment.photo}`}
+        >
+          <h2 className="text-3xl font-bold text-black">
+            {(comment.username[0] + comment.username[1]).toLocaleUpperCase()}
+          </h2>
+        </div>
         <div className="flex flex-col gap-y-1">
           <p>{comment.username}</p>
           <Stars rate={comment.rate} />
@@ -25,7 +27,7 @@ export const Comment = ({ comment, className }: CommentProps) => {
       <Box
         sx={{
           height: "fit-content",
-          minHeight: 360,
+          minHeight: 400,
           maxWidth: 350,
           width: "100%",
           p: 2,
