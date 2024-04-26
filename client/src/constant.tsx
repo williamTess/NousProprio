@@ -77,7 +77,7 @@ export const team: TeamMember[] = [
   },
   {
     name: "Valentine",
-    role: "Banquière",
+    role: "Juriste",
     description:
       "Acheteuse de biens résidentiels et locatifs\n2 biens immobiliers locatifs",
     img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FValentine.jpeg?alt=media&token=369aaa4b-7364-4381-850f-f409568f2409",
