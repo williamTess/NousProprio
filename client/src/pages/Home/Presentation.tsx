@@ -20,7 +20,7 @@ export const Presentation = ({
   return (
     <div className={`${sizeAccordingWidth} max-w-7xl m-auto`}>
       <p className="mb-6">Pour toi,</p>
-      <h1 className="font-bold text-4xl mb-10">L'immobilier c'est flou !</h1>
+      <h1 className="font-bold text-4xl mb-10">L'immobilier c'est flou ?</h1>
       <p className="mb-16">
         Parce qu’Il est facile de se sentir perdu et dépassé par la quantité
         d'informations disponibles...
@@ -44,7 +44,7 @@ export const Presentation = ({
       <div className={`flex flex-${isPortrait ? "col" : "row"} gap-3`}>
         <div className="max-w-xs">
           <ButtonMUI
-            value={"Présentation"}
+            value={"En savoir plus"}
             onClick={() => handleScrollToVideo()}
           />
         </div>
