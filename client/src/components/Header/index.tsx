@@ -16,12 +16,17 @@ const Header = () => {
   return (
     <div className="sticky top-0 z-10">
       <div className={`bg-white ${!isPortrait && "pl-14"}`}>
-        <div className="flex justify-between items-center p-5 max-w-[1450px] m-auto">
-          <Nav
-            to="/"
-            element={<Logo />}
-            onClick={() => dispatch(setCurrentTab(headerTabs[0].to))}
-          />
+        <div className="flex justify-between items-center p-5 pb-4 max-w-[1450px] m-auto">
+          <div>
+            <Nav
+              to="/"
+              element={<Logo />}
+              onClick={() => dispatch(setCurrentTab(headerTabs[0].to))}
+            />
+            <p className="font-bold text-main text-xs sm:text-lg">
+              Tout comprendre de l’investissement immobilier
+            </p>
+          </div>
           {isPortrait ? <DrawerMUI /> : <DesktopHeader />}
         </div>
       </div>

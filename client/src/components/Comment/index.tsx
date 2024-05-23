@@ -31,6 +31,7 @@ export const Comment = ({ comment, className }: CommentProps) => {
           maxWidth: 350,
           width: "100%",
           p: 2,
+          textAlign: "center",
         }}
       >
         <h4 className="text-xl font-bold mb-2">{comment.title}</h4>

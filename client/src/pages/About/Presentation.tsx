@@ -2,28 +2,26 @@ export const Presentation = () => {
   return (
     <div className="flex flex-col p-10 w-full max-w-3xl self-center">
       <p>
-        Nousproprio a été conçu pour que l’expérience client soit unique ! Notre
-        site permet une formation personnalisée. Chacun d’entre vous souhaite
-        réaliser des projets différents sur le marché de l’immobilier.
+        NousProprio a été conçu pour vivre une expérience unique ! Sur ce site,
+        bénéficie d’une formation personnalisée adaptée à tes projets
+        immobiliers. parce que nous comprenons que chacun à ces objectifs.
         <br /> <br />
-        Nousproprio repose sur les compétences d’intervenants ayant vécu et
-        appris les rouages du marché immobilier.
+        Notre équipe est composée d’investisseurs immobiliers passionnés et
+        désireux de partager leurs connaissances et t’accompagner dans cette
+        aventure. Dans cette boite à taille humaine, nous privilégions la
+        qualité à la quantité.
         <br /> <br />
-        La boîte repose sur le recrutement d'humains soucieux de partager leurs
-        expériences et de participer à cette aventure avec vous. Notre boîte à
-        taille humaine recherche avant tout la qualité à la quantité.
+        Nos tarifs reflètent le temps et l'expertise investis pour créer et
+        personnaliser nos formations, élaborer des outils de calcul adaptés à
+        chaque profil, et concevoir des designs attrayants pour nos supports
+        pédagogiques, que ce soit sous forme de présentations visuelles et de
+        vidéos.
         <br /> <br />
-        Notre prix se base sur la quantité d'heures fournies pour réaliser et
-        adapter, en fonction des profils, le contenu de nos formations
-        personnalisées, le développement de fichiers de calculs (rentabilité
-        etc.) et la conception de nos designs (visuel de formations, slides,
-        format vidéo).
+        Enfin, le site se voit nommé NousProprio, pour « Nous Propriétaire »
         <br /> <br />
-        Enfin, le site se voit nommé Nousproprio, pour « Nous propriétaire »
+        Notre challenge: t’ aider en s’adaptant à tes objectifs !
         <br /> <br />
-        Notre challenge; vous aider en s’adaptant à vos objectifs !
-        <br /> <br />
-        Parce que nous ne formons qu’un, remplaçons les « vous » par des nous.
+        Parce que nous ne formons qu’un, remplaçons les « tu » par des nous.
         <br /> <br />« Lançons nous ! »
       </p>
     </div>

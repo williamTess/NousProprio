@@ -87,7 +87,7 @@ export const team: TeamMember[] = [
     name: "Sarah",
     role: "Banquière",
     description:
-      "Banquière et investisseur dans l'immobilier locatif depuis 3 ans.\n2 biens immobiliers locatifs",
+      "Banquière et investisseur dans l'immobilier locatif depuis 3 ans\n2 biens immobiliers locatifs",
     img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FSarah.jpeg?alt=media&token=8c0d40b6-554a-4107-88f2-195f072322e3",
     icon: <AccountBalanceIcon className="mb-1" />,
   },
@@ -95,7 +95,7 @@ export const team: TeamMember[] = [
     name: "Johanna",
     role: "Experte en immobilier",
     description:
-      "Experte en financement immobilier depuis 6 ans.\n1 bien immobilier résidentiel",
+      "Experte en financement immobilier depuis 6 ans\n1 bien immobilier résidentiel",
     img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FJoahana.jpeg?alt=media&token=8920bee6-c102-4f25-a6b3-99e179bcd220",
     icon: <ApartmentIcon className="mb-1" />,
   },
@@ -103,7 +103,7 @@ export const team: TeamMember[] = [
     name: "Arold",
     role: "Expert en immobilier",
     description:
-      "Expert dans le processus d'achat d'un bien en construction.\n1 bien immobilier résidentiel",
+      "Expert dans le processus d'achat d'un bien en construction\n1 bien immobilier résidentiel",
     img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FArold.jpeg?alt=media&token=1f177f9d-f444-4ead-b68d-6e71382081a2",
     icon: <ApartmentIcon className="mb-1" />,
   },
@@ -118,7 +118,7 @@ export const team: TeamMember[] = [
     name: "William",
     role: "Developpeur & Designer",
     description:
-      "Passionné par la programmation, a réalisé le site NousProprio.",
+      "Passionné par la programmation, a réalisé le site NousProprio",
     img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FWilliam.png?alt=media&token=a94d140d-e8b3-456f-be7f-939ef1570d60",
     icon: <CodeIcon className="mb-1" />,
   },

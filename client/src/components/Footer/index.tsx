@@ -44,8 +44,8 @@ export const Footer = () => {
             <Column title="A propos">
               <>
                 <p className="mb-5">
-                  NousProprio, une entreprise qui partage des informations
-                  immobilières pour répondre aux non-dits du domaine
+                  NousProprio, l'entreprise qui personnalise ma formation dans
+                  l’immobilier en fonction de mes projets et mes objectifs
                 </p>
                 <Nav
                   to="/"
@@ -55,8 +55,9 @@ export const Footer = () => {
             </Column>
             <Column title="Notre SAV">
               <>
+                <p>Vous souhaitez nous contacter, obtenir des informations ?</p>
                 <a
-                  className="text-blue-600 font-semibold hover:underline"
+                  className="text-blue-600 font-semibold hover:underline mt-4"
                   href="mailto:equipe@nousproprio.fr"
                 >
                   <ArrowForwardIcon fontSize="small" /> Nous contacter
@@ -65,37 +66,33 @@ export const Footer = () => {
             </Column>
             <Column title="Suivez nous sur les réseaux sociaux">
               <>
-                <p className="mb-1">
-                  <InstagramIcon />
-                  <span className="font-semibold"> Instagram</span>
-                </p>
-                <p className="mb-1">
-                  <TwitterIcon /> <span className="font-semibold">Twitter</span>
-                </p>
-                <p className="mb-7">
-                  <LinkedInIcon />{" "}
-                  <span className="font-semibold">Linkedin</span>
-                </p>
-                <div className={`flex gap-2 max-w-10 ${isPortrait && "mr-40"}`}>
-                  <a
-                    href="https://www.instagram.com/nousproprio?igsh=MTJwaDgxc2NyNGF4Zw%3D%3D&utm_source=gr"
-                    target="_blank"
-                  >
-                    <ButtonMUI value={<InstagramIcon />} />
-                  </a>
-                  <a href="https://twitter.com/nousproprio" target="_blank">
-                    <ButtonMUI value={<TwitterIcon />} />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/nousproprio/about/"
-                    target="_blank"
-                  >
-                    <ButtonMUI value={<LinkedInIcon />} />
-                  </a>
-                </div>
+                <a
+                  href="https://www.instagram.com/nousproprio?igsh=MTJwaDgxc2NyNGF4Zw%3D%3D&utm_source=gr"
+                  target="_blank"
+                >
+                  <p className="mb-1">
+                    <InstagramIcon />
+                    <span className="font-semibold"> Instagram</span>
+                  </p>
+                </a>
+                <a href="https://twitter.com/nousproprio" target="_blank">
+                  <p className="mb-1">
+                    <TwitterIcon />{" "}
+                    <span className="font-semibold">Twitter</span>
+                  </p>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/nousproprio/about/"
+                  target="_blank"
+                >
+                  <p className="mb-7">
+                    <LinkedInIcon />{" "}
+                    <span className="font-semibold">Linkedin</span>
+                  </p>
+                </a>
               </>
             </Column>
-            <Column title="Contactez-nous">
+            <Column title="Notre FAQ">
               <>
                 <a href="mailto:equipe@nousproprio.fr">
                   <ButtonMUI className="max-w-24" value={"Contact"} />
@@ -103,7 +100,7 @@ export const Footer = () => {
               </>
             </Column>
           </div>
-          <p>NousProprio, notre entreprise</p>
+          <p>NousProprio, tout comprendre de l’investissement immobilier</p>
         </div>
       </div>
       <div className="bg-underFooter text-white px-20 py-7 flex">
