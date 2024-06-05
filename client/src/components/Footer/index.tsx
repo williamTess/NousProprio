@@ -7,9 +7,12 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Logo } from "../../svg/Logo";
 import { useMediaQuery } from "react-responsive";
 import Nav from "../Nav";
+import { useDispatch } from "react-redux";
+import { setCurrentTab } from "../../redux/user/userSlice";
 
 export const Footer = () => {
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
+  const dispatch = useDispatch();
   const styleAccordingToOrientation = isPortrait
     ? "flex flex-col text-center items-center mb-10"
     : "flex flex-row justify-between mb-10";
@@ -50,12 +53,13 @@ export const Footer = () => {
                 <Nav
                   to="/"
                   element={<ButtonMUI className="max-w-24" value={"Accueil"} />}
+                  onClick={() => dispatch(setCurrentTab("/"))}
                 />
               </>
             </Column>
             <Column title="Notre SAV">
               <>
-                <p>Vous souhaitez nous contacter, obtenir des informations ?</p>
+                <p>Tu souhaites nous contacter, obtenir des informations ?</p>
                 <a
                   className="text-blue-600 font-semibold hover:underline mt-4"
                   href="mailto:equipe@nousproprio.fr"
@@ -64,7 +68,7 @@ export const Footer = () => {
                 </a>
               </>
             </Column>
-            <Column title="Suivez nous sur les réseaux sociaux">
+            <Column title="Suis-nous sur les réseaux sociaux">
               <>
                 <a
                   href="https://www.instagram.com/nousproprio?igsh=MTJwaDgxc2NyNGF4Zw%3D%3D&utm_source=gr"
@@ -93,11 +97,11 @@ export const Footer = () => {
               </>
             </Column>
             <Column title="Notre FAQ">
-              <>
-                <a href="mailto:equipe@nousproprio.fr">
-                  <ButtonMUI className="max-w-24" value={"Contact"} />
-                </a>
-              </>
+              <Nav
+                to="/contact"
+                element={<ButtonMUI className="max-w-24" value={"FAQ"} />}
+                onClick={() => dispatch(setCurrentTab("/contact"))}
+              />
             </Column>
           </div>
           <p>NousProprio, tout comprendre de l’investissement immobilier</p>

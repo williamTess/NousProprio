@@ -9,6 +9,7 @@ import { PrivateRoute } from "./components/PrivateRoute";
 import { Footer } from "./components/Footer";
 import { NotFound } from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import { ContactPage } from "./pages/Contact";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         </Route>
         <Route path="/sign-in" element={<SignInPage />} />
         <Route path="/sign-up" element={<SignUpPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

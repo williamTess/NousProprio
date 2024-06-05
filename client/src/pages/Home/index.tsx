@@ -16,23 +16,23 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="bg-gray-light text-white flex flex-col py-20 px-10 sm:px-20">
+      <div className="bg-gray-light text-white flex flex-col py-10 px-10 sm:px-20">
         <Presentation
           videoRef={videoRef}
           sizeAccordingWidth={sizeAccordingWidth}
           isPortrait={isPortrait}
         />
       </div>
-      <div className="py-20 px-10 sm:px-20 flex flex-col" ref={videoRef}>
+      <div className="py-10 px-10 sm:px-20 flex flex-col" ref={videoRef}>
         <Boss sizeAccordingWidth={sizeAccordingWidth} isPortrait={isPortrait} />
       </div>
-      <div className="py-20 px-10 sm:px-20 flex flex-col bg-gray-light text-white">
+      <div className="py-10 px-10 sm:px-20 flex flex-col bg-gray-light text-white">
         <Comments
           sizeAccordingWidth={sizeAccordingWidth}
           isPortrait={isPortrait}
         />
       </div>
-      <div className="py-16 px-10 sm:px-20 flex flex-col">
+      <div className="py-10 px-10 sm:px-20 flex flex-col">
         <Video
           sizeAccordingHeight={sizeAccordingHeight}
           sizeAccordingWidth={sizeAccordingWidth}

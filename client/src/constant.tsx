@@ -1,4 +1,4 @@
-import { Comment, HeaderTab, TeamMember } from "./type";
+import { Card, Comment, HeaderTab, TeamMember } from "./type";
 import HomeIcon from "@mui/icons-material/Home";
 import Diversity3Icon from "@mui/icons-material/Diversity3";
 import CodeIcon from "@mui/icons-material/Code";
@@ -6,9 +6,11 @@ import DesignServicesIcon from "@mui/icons-material/DesignServices";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import QuizIcon from "@mui/icons-material/Quiz";
 
 export const headerTabs: HeaderTab[] = [
   { to: "/", label: "Accueil", icon: <HomeIcon /> },
+  { to: "/contact", label: "Posez vos questions", icon: <QuizIcon /> },
   { to: "/about", label: "A propos", icon: <Diversity3Icon /> },
 ];
 
@@ -133,3 +135,41 @@ export const boss = {
   img: "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FAlex.jpeg?alt=media&token=48aa6765-e38c-49ac-8987-58b064598dc6",
   icon: <BusinessCenterIcon className="mb-1" />,
 };
+
+export const FaqQuestions: Card[] = [
+  {
+    title: "Comment j’accède à ma formation ?",
+    description:
+      "Dans l’onglet “Ma formation”, tu pourras tester tes connaissances grâce a notre quiz. Tu auras, à la suite du quiz, la possibilité de construire ta formation en cliquant sur “Construis ta formation” : laisse-toi guider ! Tu peux également, si tu le souhaites, construire directement ta formation.",
+  },
+  {
+    title: "Comment fonctionne la personnalisation de ma formation ?",
+    description:
+      "Tu réponds à un questionnaire dans lequel nous avons ciblé les questions les plus pertinentes pour que la formation réponde à tes objectifs et ton profil. Fais-nous un retour si jamais une nouvelle question mérite sa place. Enjoy !",
+  },
+  {
+    title: "Ai-je un temps imparti pour profiter de ma formation ?",
+    description:
+      "Pas du tout ! Tu y as accès sans contrainte de temps. Chill !",
+  },
+  {
+    title: "A quoi ai-je accès avec ma formation ?",
+    description:
+      "Tu as accès, en plus de ta formation, aux réunions que l’on organise deux fois par mois et qui servent à répondre à vos questions sur les formations. Aussi, tu as accès aux options tels que des outils de calculs si tu les choisis.",
+  },
+  {
+    title: "Je n’ai pas compris un sujet dans ma formation, suis-je seul ?",
+    description:
+      "Au contraire, tu as un onglet dédié qui te permet de poser ta question et nous y répondons lors de réunions que l’on organise deux fois par mois.",
+  },
+  {
+    title: "Puis-je ajouter des options à ma formation ?",
+    description:
+      "Tu as accès aux options lors de la construction de ta formation. Si tu ne les sélectionnes pas à ce moment, tu peux toujours les ajouter dans ton espace “Mon compte”.",
+  },
+  {
+    title: "Comment ont été sélectionné les intervenants ?",
+    description:
+      "La sélection s’est faite sur la base de valeurs communes, associés à une expérience dans l’immobilier et un parcours professionnel adapté.",
+  },
+];

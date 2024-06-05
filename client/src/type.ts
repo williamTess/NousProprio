@@ -37,3 +37,8 @@ export type Comment = {
   title: string;
   description: string;
 };
+
+export type Card = {
+  title: string;
+  description: string;
+};
