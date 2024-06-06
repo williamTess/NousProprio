@@ -3,7 +3,7 @@ import { FaqQuestions } from "../../constant";
 
 export const FAQ = () => {
   return (
-    <div>
+    <div className="max-w-7xl m-auto">
       <AccordionList questions={FaqQuestions} />
     </div>
   );

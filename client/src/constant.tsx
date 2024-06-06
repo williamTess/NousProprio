@@ -10,8 +10,8 @@ import QuizIcon from "@mui/icons-material/Quiz";
 
 export const headerTabs: HeaderTab[] = [
   { to: "/", label: "Accueil", icon: <HomeIcon /> },
-  { to: "/contact", label: "Posez vos questions", icon: <QuizIcon /> },
   { to: "/about", label: "A propos", icon: <Diversity3Icon /> },
+  { to: "/contact", label: "Posez vos questions", icon: <QuizIcon /> },
 ];
 
 export const phoneRegExp =
@@ -140,7 +140,7 @@ export const FaqQuestions: Card[] = [
   {
     title: "Comment j’accède à ma formation ?",
     description:
-      "Dans l’onglet “Ma formation”, tu pourras tester tes connaissances grâce a notre quiz. Tu auras, à la suite du quiz, la possibilité de construire ta formation en cliquant sur “Construis ta formation” : laisse-toi guider ! Tu peux également, si tu le souhaites, construire directement ta formation.",
+      "Dans l’onglet “Ma formation”, tu pourras tester tes connaissances grâce a notre quiz. Tu auras, à la suite du quiz, la possibilité de construire ta formation en cliquant sur “Construire ma formation”. Laisse-toi guider ! Tu peux aussi construire ta formation sans passer par le quiz.",
   },
   {
     title: "Comment fonctionne la personnalisation de ma formation ?",
@@ -160,16 +160,16 @@ export const FaqQuestions: Card[] = [
   {
     title: "Je n’ai pas compris un sujet dans ma formation, suis-je seul ?",
     description:
-      "Au contraire, tu as un onglet dédié qui te permet de poser ta question et nous y répondons lors de réunions que l’on organise deux fois par mois.",
+      "Au contraire, tu as un onglet dédié pour poser tes questions, et on y répond lors des réunions que l’on organise deux fois par mois.",
   },
   {
     title: "Puis-je ajouter des options à ma formation ?",
     description:
-      "Tu as accès aux options lors de la construction de ta formation. Si tu ne les sélectionnes pas à ce moment, tu peux toujours les ajouter dans ton espace “Mon compte”.",
+      "u as accès aux options pendant la création de ta formation. Si tu ne les sélectionnes pas à ce moment-là, tu pourras toujours les ajouter dans ton espace 'Mon compte'.",
   },
   {
     title: "Comment ont été sélectionné les intervenants ?",
     description:
-      "La sélection s’est faite sur la base de valeurs communes, associés à une expérience dans l’immobilier et un parcours professionnel adapté.",
+      "La sélection s’est faite sur la base de valeurs communes, associées à une expérience dans l’immobilier et un parcours professionnel adapté.",
   },
 ];
