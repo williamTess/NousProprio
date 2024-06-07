@@ -11,7 +11,7 @@ import QuizIcon from "@mui/icons-material/Quiz";
 export const headerTabs: HeaderTab[] = [
   { to: "/", label: "Accueil", icon: <HomeIcon /> },
   { to: "/about", label: "A propos", icon: <Diversity3Icon /> },
-  { to: "/contact", label: "Des questions ?", icon: <QuizIcon /> },
+  { to: "/contact", label: "Des questions", icon: <QuizIcon /> },
 ];
 
 export const phoneRegExp =
@@ -165,7 +165,7 @@ export const FaqQuestions: Card[] = [
   {
     title: "Puis-je ajouter des options à ma formation ?",
     description:
-      "u as accès aux options pendant la création de ta formation. Si tu ne les sélectionnes pas à ce moment-là, tu pourras toujours les ajouter dans ton espace 'Mon compte'.",
+      "Tu as accès aux options pendant la création de ta formation. Si tu ne les sélectionnes pas à ce moment-là, tu pourras toujours les ajouter dans ton espace 'Mon compte'.",
   },
   {
     title: "Comment ont été sélectionné les intervenants ?",
