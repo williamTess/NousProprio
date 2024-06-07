@@ -21,25 +21,22 @@ export const Team = () => {
         <p>
           {member.icon} {member.role}
         </p>
-        <p>
+        <div>
           {member.description.split("\n").map((des) => (
-            <span key={des}>{des}</span>
+            <p key={des}>{des}</p>
           ))}
-        </p>
+        </div>
       </div>,
     ];
     return (
-      <div key={member.name}>
-        <div
-          className={`flex flex-col items-center p-10 ${
-            isEven ? "bg-gray-light text-white" : "bg-white text-gray-light"
-          }`}
-        >
-          <div
-            className={`flex flex-row w-full max-w-3xl justify-between gap-2`}
-          >
-            {isEven ? infos.map((t) => t) : infos.reverse().map((t) => t)}
-          </div>
+      <div
+        key={member.name}
+        className={`flex flex-col items-center p-10 ${
+          isEven ? "bg-gray-light text-white" : "bg-white text-gray-light"
+        }`}
+      >
+        <div className={`flex flex-row w-full max-w-3xl justify-between gap-2`}>
+          {isEven ? infos.map((t) => t) : infos.reverse().map((t) => t)}
         </div>
       </div>
     );
