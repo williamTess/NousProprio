@@ -11,7 +11,7 @@ import QuizIcon from "@mui/icons-material/Quiz";
 export const headerTabs: HeaderTab[] = [
   { to: "/", label: "Accueil", icon: <HomeIcon /> },
   { to: "/about", label: "A propos", icon: <Diversity3Icon /> },
-  { to: "/contact", label: "Posez vos questions", icon: <QuizIcon /> },
+  { to: "/contact", label: "Des questions ?", icon: <QuizIcon /> },
 ];
 
 export const phoneRegExp =

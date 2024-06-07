@@ -6,29 +6,31 @@ export const Team = () => {
   return team.map((member) => {
     isEven = !isEven;
     const infos = [
-      <div className="min-w-32 self-center">
+      <div className="min-w-32 self-center" key={member.name}>
         <img
           src={member.img}
           alt={member.name}
           className="w-40 h-40 rounded-full object-cover"
         />
       </div>,
-      <div className={`flex flex-col self-center ${isEven && "text-right"}`}>
+      <div
+        className={`flex flex-col self-center ${isEven && "text-right"}`}
+        key={member.description}
+      >
         <h1 className="font-bold text-2xl mb-2">{member.name}</h1>
         <p>
           {member.icon} {member.role}
         </p>
         <p>
           {member.description.split("\n").map((des) => (
-            <p>{des}</p>
+            <span key={des}>{des}</span>
           ))}
         </p>
       </div>,
     ];
     return (
-      <>
+      <div key={member.name}>
         <div
-          key={member.name}
           className={`flex flex-col items-center p-10 ${
             isEven ? "bg-gray-light text-white" : "bg-white text-gray-light"
           }`}
@@ -39,7 +41,7 @@ export const Team = () => {
             {isEven ? infos.map((t) => t) : infos.reverse().map((t) => t)}
           </div>
         </div>
-      </>
+      </div>
     );
   });
 };

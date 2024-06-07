@@ -15,6 +15,7 @@ export const DesktopHeader = () => {
       {headerTabs.map((tab) => (
         <Nav
           to={tab.to}
+          key={tab.label}
           element={
             <li
               className={`hover:text-main ${

@@ -12,7 +12,7 @@ type AccordionProps = {
 
 export default function AccordionList({ questions }: AccordionProps) {
   const defaultTitle = "Comment fonctionne la FAQ ?";
-  const [expanded, setExpanded] = useState<string | false>(false);
+  const [expanded, setExpanded] = useState<string | false>(defaultTitle);
 
   const handleChange =
     (panel: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => {
@@ -50,6 +50,7 @@ export default function AccordionList({ questions }: AccordionProps) {
         <Accordion
           expanded={expanded === question.title}
           onChange={handleChange(question.title)}
+          key={question.title}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
