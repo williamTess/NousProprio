@@ -17,7 +17,9 @@ export const Video = ({
   return (
     <div className={`${sizeAccordingWidth} flex flex-col max-w-7xl m-auto`}>
       <p className="text-blue-400 mb-6">Une vidéo vaut mieux que 10 000 mots</p>
-      <h1 className="font-semibold text-3xl mb-4">Tu vas te reconnaitre</h1>
+      <h1 className="font-semibold text-3xl mb-4">
+        C'est sûr, tu vas te reconnaitre
+      </h1>
       <div className={`w-full ${sizeAccordingHeight} mb-5`}>
         <YouTube videoId="WqGJ6lUnJdI" className="w-full h-full" />
       </div>
