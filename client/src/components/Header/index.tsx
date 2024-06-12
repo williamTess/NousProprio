@@ -15,8 +15,12 @@ const Header = () => {
 
   return (
     <div className="sticky top-0 z-10">
-      <div className={`bg-white ${!isPortrait && "pl-14"}`}>
-        <div className="flex justify-between items-center p-5 pb-4 max-w-[1450px] m-auto">
+      <div
+        className={` bg-gradient-to-b from-white/95 via-white/70 via-85% to-transparent  ${
+          !isPortrait && "pl-14"
+        }`}
+      >
+        <div className="flex justify-between items-center p-5 pb-6 max-w-[1450px] m-auto">
           <div>
             <Nav
               to="/"

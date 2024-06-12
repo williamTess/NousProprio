@@ -6,6 +6,7 @@ import { Presentation } from "./Presentation";
 import { Video } from "./Video";
 import { Boss } from "./Boss";
 import { Comments } from "./Comments";
+import VideoHeader from "./HeaderVideo.mp4";
 
 const HomePage = () => {
   const { currentUser } = useSelector((state: RootState) => state.user);
@@ -16,6 +17,15 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col">
+      <div className="flex flex-col h-[300px] sm:h-[500px] overflow-x-hidden overflow-y-hidden -mt-24 sm:-mt-52">
+        <video
+          src={VideoHeader}
+          loop
+          autoPlay
+          muted
+          className="object-cover object-center h-screen w-screen -z-10"
+        ></video>
+      </div>
       <div className="bg-gray-light text-white flex flex-col py-10 px-10 sm:px-20">
         <Presentation
           videoRef={videoRef}

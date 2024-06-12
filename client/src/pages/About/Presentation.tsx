@@ -4,7 +4,7 @@ export const Presentation = () => {
       <p>
         <b>NousProprio</b> a été conçu pour vivre une expérience unique ! Sur ce
         site, bénéficie d’une formation personnalisée adaptée à tes projets
-        immobiliers. parce que nous comprenons que chacun à ces objectifs.
+        immobiliers. Parce que nous comprenons que chacun à ces objectifs.
         <br /> <br />
         <b>Notre équipe</b> est composée d’investisseurs immobiliers passionnés
         et désireux de partager leurs connaissances et t’accompagner dans cette

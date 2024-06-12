@@ -153,7 +153,7 @@ export const FaqQuestions: Card[] = [
       "Pas du tout ! Tu y as accès sans contrainte de temps. Chill !",
   },
   {
-    title: "A quoi ai-je accès avec ma formation ?",
+    title: "À quoi ai-je accès avec ma formation ?",
     description:
       "Tu as accès, en plus de ta formation, aux réunions que l’on organise deux fois par mois et qui servent à répondre à vos questions sur les formations. Aussi, tu as accès aux options tels que des outils de calculs si tu les choisis.",
   },

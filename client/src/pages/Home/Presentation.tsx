@@ -22,7 +22,7 @@ export const Presentation = ({
       <p className="mb-6">Pour toi,</p>
       <h1 className="font-bold text-4xl mb-10">L'immobilier c'est flou ?</h1>
       <p className="mb-16">
-        Parce qu’Il est facile de se sentir perdu et dépassé par la quantité
+        Parce qu’il est facile de se sentir perdu et dépassé par la quantité
         d'informations disponibles...
         <br />
         <br />
