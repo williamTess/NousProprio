@@ -22,12 +22,12 @@ export const Video = ({
         <YouTube videoId="WqGJ6lUnJdI" className="w-full h-full" />
       </div>
       <p className="mb-8 text-center">
-        En t'inscrivant aujourd'hui, tu seras automatiquement inscrit à une
-        réunion privée où tu pourras poser toutes tes questions sur l'immobilier
-        en plus d'avoir l'accès à notre accompagnement personnalisé.
+        En t'inscrivant aujourd'hui, tu auras automatiquement accès à{" "}
+        <b>du contenu disponible</b> où tu pourras comprendre les rouages de
+        l’immobilier et casser les clichés connus.
         <br />
         <br />
-        Nos formations sont bientôt disponibles !
+        Nos formations personnalisées sont bientôt disponibles !
       </p>
       {!currentUser && (
         <div className="max-w-24 self-center">
