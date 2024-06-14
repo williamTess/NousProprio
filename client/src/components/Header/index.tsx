@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <div className="sticky top-0 z-10">
       <div
-        className={` bg-gradient-to-b from-white/95 via-white/70 via-85% to-transparent  ${
+        className={`bg-gradient-to-b from-white/95 via-white/70 via-85% to-transparent  ${
           !isPortrait && "pl-14"
         }`}
       >

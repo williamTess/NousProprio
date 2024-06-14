@@ -17,7 +17,10 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col h-[250px] sm:h-[600px] 2xl:h-[800px] overflow-x-hidden overflow-y-hidden -mt-24 sm:-mt-52">
+      <div
+        className="flex flex-col h-[250px] sm:h-[600px] 2xl:h-[800px] overflow-x-hidden overflow-y-hidden -mt-24 sm:-mt-52 
+        bg-gradient-to-b from-transparent via-gray-light via-85% to-gray-light"
+      >
         <video
           src={VideoHeader}
           loop
@@ -26,7 +29,7 @@ const HomePage = () => {
           className="object-cover object-center h-screen w-screen -z-10"
         ></video>
       </div>
-      <div className="bg-gray-light text-white flex flex-col py-8 pt-5 px-10 sm:px-20">
+      <div className="bg-gray-light text-white flex flex-col py-8 pt-5 px-10 sm:px-20 -mt-10 sm:-mt-20 2xl:-mt-28">
         <Presentation
           videoRef={videoRef}
           sizeAccordingWidth={sizeAccordingWidth}
