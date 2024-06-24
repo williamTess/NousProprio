@@ -1,17 +1,15 @@
 import { headerTabs } from "../../constant";
 import Nav from "../Nav";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
-import { setCurrentTab } from "../../redux/user/userSlice";
 
 export const DesktopHeader = () => {
   const { currentTab, currentUser } = useSelector(
     (state: RootState) => state.user
   );
-  const dispatch = useDispatch();
 
   return (
-    <ul className="flex gap-12 mr-12">
+    <ul className="flex gap-6 lg:gap-12 mr-12">
       {headerTabs.map((tab) => (
         <Nav
           to={tab.to}
@@ -25,12 +23,10 @@ export const DesktopHeader = () => {
               {tab.label}
             </li>
           }
-          onClick={() => dispatch(setCurrentTab(tab.to))}
         />
       ))}
       <Nav
         to="/profile"
-        onClick={() => dispatch(setCurrentTab("/sign-in"))}
         element={
           currentUser ? (
             <img
@@ -41,7 +37,8 @@ export const DesktopHeader = () => {
           ) : (
             <li
               className={`hover:text-main mr-6 ${
-                currentTab === "/sign-in" && "font-bold text-main"
+                (currentTab === "/sign-in" || currentTab === "/sign-up") &&
+                "font-bold text-main"
               }`}
             >
               Connexion

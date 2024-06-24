@@ -7,12 +7,9 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Logo } from "../../svg/Logo";
 import { useMediaQuery } from "react-responsive";
 import Nav from "../Nav";
-import { useDispatch } from "react-redux";
-import { setCurrentTab } from "../../redux/user/userSlice";
 
 export const Footer = () => {
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
-  const dispatch = useDispatch();
   const styleAccordingToOrientation = isPortrait
     ? "flex flex-col text-center items-center mb-10"
     : "flex flex-row justify-between mb-10";
@@ -53,7 +50,6 @@ export const Footer = () => {
                 <Nav
                   to="/"
                   element={<ButtonMUI className="max-w-24" value={"Accueil"} />}
-                  onClick={() => dispatch(setCurrentTab("/"))}
                 />
               </>
             </Column>
@@ -100,7 +96,6 @@ export const Footer = () => {
               <Nav
                 to="/contact"
                 element={<ButtonMUI className="max-w-24" value={"FAQ"} />}
-                onClick={() => dispatch(setCurrentTab("/contact"))}
               />
             </Column>
           </div>

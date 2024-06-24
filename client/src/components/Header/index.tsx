@@ -1,17 +1,14 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Nav from "../Nav";
 import { RootState } from "../../redux/store";
 import { Logo } from "../../svg/Logo";
 import { useMediaQuery } from "react-responsive";
 import { DesktopHeader } from "./DesktopHeader";
 import DrawerMUI from "../MUI/DrawerMUI";
-import { setCurrentTab } from "../../redux/user/userSlice";
-import { headerTabs } from "../../constant";
 
 const Header = () => {
   const { currentUser } = useSelector((state: RootState) => state.user);
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
-  const dispatch = useDispatch();
 
   return (
     <div className="sticky top-0 z-10">
@@ -22,11 +19,7 @@ const Header = () => {
       >
         <div className="flex justify-between items-center p-5 pb-6 max-w-[1450px] m-auto">
           <div>
-            <Nav
-              to="/"
-              element={<Logo />}
-              onClick={() => dispatch(setCurrentTab(headerTabs[0].to))}
-            />
+            <Nav to="/" element={<Logo />} />
             <p className="font-bold text-main text-xs sm:text-lg">
               Tout comprendre de l’investissement immobilier
             </p>
