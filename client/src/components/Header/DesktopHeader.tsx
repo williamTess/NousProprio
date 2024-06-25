@@ -9,7 +9,7 @@ export const DesktopHeader = () => {
     (state: RootState) => state.user
   );
 
-  const { gradient, logo, textColor } = getHeaderStyle(currentTab);
+  const { textColor } = getHeaderStyle(currentTab);
 
   return (
     <ul className="flex gap-6 lg:gap-12 mr-12">

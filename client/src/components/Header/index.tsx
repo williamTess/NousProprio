@@ -12,7 +12,7 @@ const Header = () => {
   );
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
 
-  const { gradient, logo, textColor } = getHeaderStyle(currentTab);
+  const { gradient, logo } = getHeaderStyle(currentTab);
 
   return (
     <div className="sticky top-0 z-10">
