@@ -7,9 +7,11 @@ import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import QuizIcon from "@mui/icons-material/Quiz";
+import ArticleIcon from "@mui/icons-material/Article";
 
 export const headerTabs: HeaderTab[] = [
   { to: "/", label: "Accueil", icon: <HomeIcon /> },
+  { to: "/formation", label: "Ma formation", icon: <ArticleIcon /> },
   { to: "/about", label: "A propos", icon: <Diversity3Icon /> },
   { to: "/contact", label: "Des questions ?", icon: <QuizIcon /> },
 ];

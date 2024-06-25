@@ -10,6 +10,7 @@ import { Footer } from "./components/Footer";
 import { NotFound } from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import { ContactPage } from "./pages/Contact";
+import { FormationPage } from "./pages/Formation";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/sign-up" element={<SignUpPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/formation" element={<FormationPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

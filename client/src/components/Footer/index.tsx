@@ -38,7 +38,7 @@ export const Footer = () => {
       >
         <div className={`flex flex-col w-full max-w-[1350px] m-auto`}>
           <p className={`mb-16 ${isPortrait && "self-center"}`}>
-            <Logo color="white" />
+            <Logo color="white" colorP="white" />
           </p>
           <div className={styleAccordingToOrientation}>
             <Column title="A propos">

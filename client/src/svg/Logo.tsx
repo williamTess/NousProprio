@@ -2,12 +2,18 @@ interface Props {
   width?: string;
   height?: string;
   color?: string;
+  colorP?: string;
 }
 
 export const Logo = (props: Props) => {
-  const { width = "100", height = "25", color = "normal" } = props;
+  const {
+    width = "100",
+    height = "25",
+    color = "normal",
+    colorP = "normal",
+  } = props;
   const colorFill = color === "normal" ? "#244c6d" : "white";
-  const colorPoint = color === "normal" ? "#bf0026" : "white";
+  const colorPoint = colorP === "normal" ? "#bf0026" : "white";
 
   return (
     <svg

@@ -51,7 +51,7 @@ const SignUpPage = () => {
   });
 
   return (
-    <div className="p-3 max-w-lg mx-auto mb-36">
+    <div className="pb-3 max-w-lg mx-auto mb-36">
       <h1 className="text-center text-3xl font-bold p-5 mb-10">Inscription</h1>
       <form onSubmit={formik.handleSubmit} className="flex flex-col gap-4">
         <InputFormik name="username" formik={formik} />

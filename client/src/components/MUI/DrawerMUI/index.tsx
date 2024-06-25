@@ -19,7 +19,9 @@ import { color } from "../../../style/color";
 
 export default function DrawerMUI() {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
-  const currentUser = useSelector((state: RootState) => state.user.currentUser);
+  const { currentUser, currentTab } = useSelector(
+    (state: RootState) => state.user
+  );
 
   const toggleDrawer = React.useCallback(
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -96,7 +98,10 @@ export default function DrawerMUI() {
     <div>
       <React.Fragment key={"left"}>
         <Button onClick={toggleDrawer(true)}>
-          <MenuIcon fontSize="large" htmlColor={color.greyLight} />
+          <MenuIcon
+            fontSize="large"
+            htmlColor={currentTab === "/formation" ? "white" : color.greyLight}
+          />
         </Button>
         <Drawer anchor={"left"} open={isOpen} onClose={toggleDrawer(false)}>
           {list()}
