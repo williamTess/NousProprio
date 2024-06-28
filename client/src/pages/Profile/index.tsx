@@ -14,6 +14,7 @@ import { phoneRegExp } from "../../constant";
 import { myNotif } from "../../utils/myNotif";
 import { Status } from "../../type";
 import { Modal } from "../../components/Modal";
+import { SelectFormik } from "../../components/MUI/SelectFormik";
 
 const validationSchema = yup.object({
   username: yup.string().required("Username is required"),
@@ -98,7 +99,8 @@ const ProfilePage = () => {
         <InputFormik name="username" formik={formik} />
         <InputFormik name="email" formik={formik} />
         <InputFormik name="phoneNumber" formik={formik} />
-        <InputFormik name="statusText" formik={formik} multiline rows={4} />
+        {/* <InputFormik name="statusText" formik={formik} multiline rows={4} /> */}
+        <SelectFormik name="statusText" formik={formik} />
 
         <ButtonMUI
           type="submit"

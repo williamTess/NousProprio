@@ -24,6 +24,10 @@ const userSchema = mongoose.Schema(
       type: String,
       default: "",
     },
+    firstConnexion: {
+      type: Boolean,
+      default: true,
+    },
     profilePicture: {
       type: String,
       default:

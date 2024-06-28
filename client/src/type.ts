@@ -7,6 +7,7 @@ export type User = {
   profilePicture: string;
   phoneNumber: string;
   statusText: string;
+  firstConnexion: boolean;
 };
 
 export type HeaderTab = {
@@ -42,3 +43,11 @@ export type Card = {
   title: string;
   description: string;
 };
+
+export enum UserJobs {
+  STUDENT = "STUDENT",
+  CDI = "CDI",
+  CDD = "CDD",
+  ALTERNATE = "ALTERNATE",
+  ON_THEIR_OWN = "ON_THEIR_OWN",
+}

@@ -11,6 +11,10 @@ import { NotFound } from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import { ContactPage } from "./pages/Contact";
 import { FormationPage } from "./pages/Formation";
+import { ContentPage } from "./pages/Formation/Content";
+import { WelcomePage } from "./pages/Formation/Welcome";
+import { QuizzPage } from "./pages/Formation/Quizz";
+import { PersonalPage } from "./pages/Formation/Personal";
 
 export default function App() {
   return (
@@ -26,6 +30,18 @@ export default function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/formation" element={<FormationPage />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/formation/welcome" element={<WelcomePage />} />
+        </Route>
+        <Route element={<PrivateRoute />}>
+          <Route path="/formation/content" element={<ContentPage />} />
+        </Route>
+        <Route element={<PrivateRoute />}>
+          <Route path="/formation/quizz" element={<QuizzPage />} />
+        </Route>
+        <Route element={<PrivateRoute />}>
+          <Route path="/formation/personal" element={<PersonalPage />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

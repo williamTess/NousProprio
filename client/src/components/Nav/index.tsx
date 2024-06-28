@@ -5,12 +5,16 @@ interface Props {
   to: string;
   element: ReactElement;
   onClick?: () => void;
+  disable?: boolean;
 }
 
 const Nav = (props: Props) => {
-  const { to, element, onClick } = props;
+  const { to, element, onClick, disable = false } = props;
+
+  if (disable) return element;
+
   return (
-    <Link to={to} onClick={onClick}>
+    <Link to={to} onClick={onClick} className="sm:self-end">
       {element}
     </Link>
   );

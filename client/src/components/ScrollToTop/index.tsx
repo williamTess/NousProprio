@@ -14,7 +14,10 @@ const ScrollToTop = () => {
 
   // Automatically scrolls to top whenever pathname changes
   useEffect(() => {
-    const tab = copiedTabs.find((tab) => tab.to.includes(pathname));
+    const tab = copiedTabs.find((tab) => {
+      console.log(tab.to, pathname);
+      return tab.to.includes(pathname.split("/", 2).join("/"));
+    });
 
     window.scrollTo(0, 0);
     dispatch(setCurrentTab(tab ? tab.to : ""));

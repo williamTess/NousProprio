@@ -175,3 +175,36 @@ export const FaqQuestions: Card[] = [
       "La sélection s’est faite sur la base de valeurs communes, associées à une expérience dans l’immobilier et un parcours professionnel adapté.",
   },
 ];
+
+export const formationList = [
+  {
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FAlex.jpeg?alt=media&token=48aa6765-e38c-49ac-8987-58b064598dc6",
+    title: "Vidéo de bienvenue",
+    description:
+      "Une vidéo de présentation faite sur mesure pour ton status actuel",
+    to: "/formation/welcome",
+  },
+  {
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FAlex.jpeg?alt=media&token=48aa6765-e38c-49ac-8987-58b064598dc6",
+    title: "Mon contenu",
+    description: "Tout le contenu accessible pour toi",
+    to: "/formation/content",
+  },
+  {
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FAlex.jpeg?alt=media&token=48aa6765-e38c-49ac-8987-58b064598dc6",
+    title: "Quizz",
+    description: "Test tes connaissances pour voir si tu es vraiment un pro",
+    to: "/formation/quizz",
+  },
+  {
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/nousproprio.appspot.com/o/Equipe%2FAlex.jpeg?alt=media&token=48aa6765-e38c-49ac-8987-58b064598dc6",
+    title: "Formation perso",
+    description:
+      "Nous construisons la formation immobilière adapté à tes besoins",
+    to: "/formation/personal",
+  },
+];

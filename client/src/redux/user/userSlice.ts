@@ -24,6 +24,7 @@ const userSlice = createSlice({
         profilePicture: action.payload.profilePicture,
         phoneNumber: action.payload.phoneNumber,
         statusText: action.payload.statusText,
+        firstConnexion: action.payload.firstConnexion,
       };
     },
     removeUser: (state) => {
