@@ -1,5 +1,6 @@
 import { request } from "../../utils/request";
 import { User } from "../../type";
+import { getUrlMode } from "../../utils/getUrlMode";
 
 type UserResponse = User & {
   success: boolean;
@@ -45,6 +46,20 @@ export const deleteUser = async (id?: string) => {
   const res: Promise<UserResponse> = await request(
     "delete",
     `api/user/delete/${id}`
+  ).then((data) => data.json());
+
+  return res;
+};
+
+export const validateTutorialUser = async (id: string) => {
+  const apiUrl = getUrlMode();
+
+  const res: Promise<UserResponse> = await request(
+    "post",
+    `${apiUrl}/user/validate-tutorial/${id}`,
+    {
+      body: JSON.stringify({ firstConnexion: true }),
+    }
   ).then((data) => data.json());
 
   return res;

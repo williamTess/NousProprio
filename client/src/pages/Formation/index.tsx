@@ -11,7 +11,6 @@ export const FormationPage = () => {
   const navigate = useNavigate();
   const openModal = !!!currentUser;
   const isFirst = currentUser ? currentUser.firstConnexion : false;
-  console.log(currentUser);
 
   return (
     <div className="flex flex-col">

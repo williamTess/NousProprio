@@ -1,5 +1,6 @@
 import express from "express";
 import {
+  approveTutorialUser,
   deleteUser,
   test,
   updateUser,
@@ -11,5 +12,6 @@ const router = express.Router();
 router.get("/", test);
 router.post("/update/:id", verifyToken, updateUser);
 router.delete("/delete/:id", verifyToken, deleteUser);
+router.post("/validate-tutorial/:id", verifyToken, approveTutorialUser);
 
 export default router;

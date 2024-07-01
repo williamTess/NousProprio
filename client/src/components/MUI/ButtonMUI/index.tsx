@@ -11,11 +11,12 @@ export const ButtonMUI = (props: Props) => {
     variant = "contained",
     fullWidth = true,
     value = "YOU NEED A VALUE",
+    icon,
     ...rest
   } = props;
   return (
     <Button color={color} variant={variant} fullWidth={fullWidth} {...rest}>
-      {value}
+      {value} {icon ?? icon}
     </Button>
   );
 };
