@@ -58,7 +58,7 @@ export const validateTutorialUser = async (id: string) => {
     "post",
     `${apiUrl}/user/validate-tutorial/${id}`,
     {
-      body: JSON.stringify({ firstConnexion: true }),
+      body: JSON.stringify({ firstConnexion: false }),
     }
   ).then((data) => data.json());
 
